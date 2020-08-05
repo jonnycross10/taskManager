@@ -57,5 +57,25 @@ namespace taskManager
             assignedTo.Text = getBackWork().assigned;
             state.Text = getBackWork().state;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            lName.Visible = true;
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
