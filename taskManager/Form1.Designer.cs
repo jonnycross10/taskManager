@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "",
             ""}, -1);
             this.listView1 = new System.Windows.Forms.ListView();
@@ -56,7 +56,7 @@
             this.columnHeader1});
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem3});
+            listViewItem2});
             this.listView1.Location = new System.Drawing.Point(547, 217);
             this.listView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listView1.Name = "listView1";
@@ -76,7 +76,6 @@
             this.listBox1.Size = new System.Drawing.Size(466, 304);
             this.listBox1.TabIndex = 1;
             this.listBox1.Tag = "listbox1";
-            this.listBox1.Visible = false;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // name
@@ -88,6 +87,7 @@
             this.name.Size = new System.Drawing.Size(51, 20);
             this.name.TabIndex = 2;
             this.name.Text = "label1";
+            this.name.Visible = false;
             // 
             // description
             // 
@@ -98,6 +98,7 @@
             this.description.Size = new System.Drawing.Size(51, 20);
             this.description.TabIndex = 3;
             this.description.Text = "label2";
+            this.description.Visible = false;
             // 
             // assignedTo
             // 
@@ -108,6 +109,7 @@
             this.assignedTo.Size = new System.Drawing.Size(51, 20);
             this.assignedTo.TabIndex = 4;
             this.assignedTo.Text = "label3";
+            this.assignedTo.Visible = false;
             // 
             // state
             // 
@@ -118,6 +120,7 @@
             this.state.Size = new System.Drawing.Size(51, 20);
             this.state.TabIndex = 5;
             this.state.Text = "label4";
+            this.state.Visible = false;
             // 
             // showList
             // 
