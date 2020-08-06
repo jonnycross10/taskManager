@@ -60,7 +60,15 @@ namespace taskManager
 
         private void button1_Click(object sender, EventArgs e)
         {
-            lName.Visible = true;   
+            lName.Visible = true;
+            tName.Visible = true;
+            lDescription.Visible = true;
+            tDescription.Visible = true;
+            lAssigned.Visible = true;
+            tAssigned.Visible = true;
+            lCompleted.Visible = true;
+            tCompleted.Visible = true;
+            submit.Visible = true;
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
