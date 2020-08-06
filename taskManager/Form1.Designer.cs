@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
             "",
             ""}, -1);
             this.listView1 = new System.Windows.Forms.ListView();
@@ -53,11 +53,12 @@
             // 
             // listView1
             // 
+            this.listView1.BackColor = System.Drawing.Color.MediumOrchid;
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1});
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem4});
+            listViewItem3});
             this.listView1.Location = new System.Drawing.Point(607, 286);
             this.listView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listView1.Name = "listView1";
@@ -69,12 +70,15 @@
             // 
             // listBox1
             // 
+            this.listBox1.BackColor = System.Drawing.Color.MediumOrchid;
+            this.listBox1.Font = new System.Drawing.Font("Arial Narrow", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox1.ForeColor = System.Drawing.Color.Black;
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
+            this.listBox1.ItemHeight = 33;
             this.listBox1.Location = new System.Drawing.Point(26, 286);
             this.listBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(466, 304);
+            this.listBox1.Size = new System.Drawing.Size(466, 301);
             this.listBox1.TabIndex = 1;
             this.listBox1.Tag = "listbox1";
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
@@ -82,18 +86,22 @@
             // name
             // 
             this.name.AutoSize = true;
-            this.name.BackColor = System.Drawing.Color.White;
+            this.name.BackColor = System.Drawing.Color.MediumOrchid;
+            this.name.Font = new System.Drawing.Font("Arial Narrow", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name.ForeColor = System.Drawing.Color.Black;
             this.name.Location = new System.Drawing.Point(666, 326);
             this.name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(51, 20);
+            this.name.Size = new System.Drawing.Size(80, 33);
             this.name.TabIndex = 2;
             this.name.Text = "label1";
             this.name.Visible = false;
             // 
             // description
             // 
-            this.description.BackColor = System.Drawing.Color.White;
+            this.description.BackColor = System.Drawing.Color.MediumOrchid;
+            this.description.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.description.ForeColor = System.Drawing.Color.Black;
             this.description.Location = new System.Drawing.Point(924, 326);
             this.description.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.description.MinimumSize = new System.Drawing.Size(30, 50);
@@ -106,11 +114,13 @@
             // assignedTo
             // 
             this.assignedTo.AutoSize = true;
-            this.assignedTo.BackColor = System.Drawing.Color.White;
+            this.assignedTo.BackColor = System.Drawing.Color.MediumOrchid;
+            this.assignedTo.Font = new System.Drawing.Font("Arial Narrow", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.assignedTo.ForeColor = System.Drawing.Color.Black;
             this.assignedTo.Location = new System.Drawing.Point(666, 486);
             this.assignedTo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.assignedTo.Name = "assignedTo";
-            this.assignedTo.Size = new System.Drawing.Size(51, 20);
+            this.assignedTo.Size = new System.Drawing.Size(80, 33);
             this.assignedTo.TabIndex = 4;
             this.assignedTo.Text = "label3";
             this.assignedTo.Visible = false;
@@ -118,11 +128,13 @@
             // state
             // 
             this.state.AutoSize = true;
-            this.state.BackColor = System.Drawing.Color.White;
+            this.state.BackColor = System.Drawing.Color.MediumOrchid;
+            this.state.Font = new System.Drawing.Font("Arial Narrow", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.state.ForeColor = System.Drawing.Color.Black;
             this.state.Location = new System.Drawing.Point(924, 486);
             this.state.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.state.Name = "state";
-            this.state.Size = new System.Drawing.Size(51, 20);
+            this.state.Size = new System.Drawing.Size(80, 33);
             this.state.TabIndex = 5;
             this.state.Text = "label4";
             this.state.Visible = false;
@@ -175,9 +187,11 @@
             // lName
             // 
             this.lName.AutoSize = true;
+            this.lName.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lName.ForeColor = System.Drawing.Color.White;
             this.lName.Location = new System.Drawing.Point(1230, 286);
             this.lName.Name = "lName";
-            this.lName.Size = new System.Drawing.Size(51, 20);
+            this.lName.Size = new System.Drawing.Size(54, 24);
             this.lName.TabIndex = 11;
             this.lName.Text = "Name";
             this.lName.Visible = false;
@@ -186,9 +200,11 @@
             // lDescription
             // 
             this.lDescription.AutoSize = true;
+            this.lDescription.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lDescription.ForeColor = System.Drawing.Color.White;
             this.lDescription.Location = new System.Drawing.Point(1230, 342);
             this.lDescription.Name = "lDescription";
-            this.lDescription.Size = new System.Drawing.Size(89, 20);
+            this.lDescription.Size = new System.Drawing.Size(98, 24);
             this.lDescription.TabIndex = 12;
             this.lDescription.Text = "Description";
             this.lDescription.Visible = false;
@@ -196,9 +212,11 @@
             // lAssigned
             // 
             this.lAssigned.AutoSize = true;
+            this.lAssigned.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lAssigned.ForeColor = System.Drawing.Color.White;
             this.lAssigned.Location = new System.Drawing.Point(1230, 452);
             this.lAssigned.Name = "lAssigned";
-            this.lAssigned.Size = new System.Drawing.Size(121, 20);
+            this.lAssigned.Size = new System.Drawing.Size(132, 24);
             this.lAssigned.TabIndex = 13;
             this.lAssigned.Text = "Users Assigned";
             this.lAssigned.Visible = false;
@@ -206,9 +224,11 @@
             // lCompleted
             // 
             this.lCompleted.AutoSize = true;
+            this.lCompleted.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lCompleted.ForeColor = System.Drawing.Color.White;
             this.lCompleted.Location = new System.Drawing.Point(1230, 505);
             this.lCompleted.Name = "lCompleted";
-            this.lCompleted.Size = new System.Drawing.Size(86, 20);
+            this.lCompleted.Size = new System.Drawing.Size(93, 24);
             this.lCompleted.TabIndex = 14;
             this.lCompleted.Text = "Completed";
             this.lCompleted.Visible = false;
@@ -227,8 +247,8 @@
             // 
             // TMSName
             // 
-            this.TMSName.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TMSName.ForeColor = System.Drawing.Color.Maroon;
+            this.TMSName.Font = new System.Drawing.Font("Sylfaen", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TMSName.ForeColor = System.Drawing.Color.Black;
             this.TMSName.Location = new System.Drawing.Point(579, 29);
             this.TMSName.Name = "TMSName";
             this.TMSName.Size = new System.Drawing.Size(698, 109);
@@ -241,7 +261,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Aqua;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(1849, 1050);
             this.Controls.Add(this.TMSName);
             this.Controls.Add(this.submit);
