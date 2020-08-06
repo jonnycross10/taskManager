@@ -41,7 +41,8 @@ namespace taskManager
             //this.AutoSize = true;
             InitializeComponent();
             //set the damn size
-            this.Size = new Size(1000, 1500);
+            this.Size = new Size(1500, 1400);
+            
             myList item1 = getBackWork();
             listBox1.Items.Add(item1.listName); //adds listname to the itemBox
         }
@@ -59,6 +60,11 @@ namespace taskManager
             description.Text = getBackWork().listDescription;
             assignedTo.Text = getBackWork().assigned;
             state.Text = getBackWork().state;
+            listView1.Visible = true;
+            name.Visible = true;
+            description.Visible = true;
+            assignedTo.Visible = true;
+            state.Visible = true;
         }
 
         private void button1_Click(object sender, EventArgs e)

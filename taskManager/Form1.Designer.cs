@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem(new string[] {
             "",
             ""}, -1);
             this.listView1 = new System.Windows.Forms.ListView();
@@ -56,7 +56,7 @@
             this.columnHeader1});
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem12});
             this.listView1.Location = new System.Drawing.Point(547, 217);
             this.listView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listView1.Name = "listView1";
@@ -91,11 +91,11 @@
             // 
             // description
             // 
-            this.description.AutoSize = true;
             this.description.Location = new System.Drawing.Point(864, 257);
             this.description.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.description.MinimumSize = new System.Drawing.Size(30, 50);
             this.description.Name = "description";
-            this.description.Size = new System.Drawing.Size(51, 20);
+            this.description.Size = new System.Drawing.Size(132, 91);
             this.description.TabIndex = 3;
             this.description.Text = "label2";
             this.description.Visible = false;
@@ -134,33 +134,33 @@
             // 
             // tName
             // 
-            this.tName.Location = new System.Drawing.Point(1250, 228);
+            this.tName.Location = new System.Drawing.Point(1270, 228);
             this.tName.Name = "tName";
-            this.tName.Size = new System.Drawing.Size(146, 26);
+            this.tName.Size = new System.Drawing.Size(545, 26);
             this.tName.TabIndex = 7;
             this.tName.Visible = false;
             // 
             // tDescription
             // 
-            this.tDescription.Location = new System.Drawing.Point(1250, 294);
+            this.tDescription.Location = new System.Drawing.Point(1270, 294);
             this.tDescription.Name = "tDescription";
-            this.tDescription.Size = new System.Drawing.Size(146, 26);
+            this.tDescription.Size = new System.Drawing.Size(545, 26);
             this.tDescription.TabIndex = 8;
             this.tDescription.Visible = false;
             // 
             // tAssigned
             // 
-            this.tAssigned.Location = new System.Drawing.Point(1250, 361);
+            this.tAssigned.Location = new System.Drawing.Point(1270, 364);
             this.tAssigned.Name = "tAssigned";
-            this.tAssigned.Size = new System.Drawing.Size(146, 26);
+            this.tAssigned.Size = new System.Drawing.Size(545, 26);
             this.tAssigned.TabIndex = 9;
             this.tAssigned.Visible = false;
             // 
             // tCompleted
             // 
-            this.tCompleted.Location = new System.Drawing.Point(1250, 430);
+            this.tCompleted.Location = new System.Drawing.Point(1270, 430);
             this.tCompleted.Name = "tCompleted";
-            this.tCompleted.Size = new System.Drawing.Size(146, 26);
+            this.tCompleted.Size = new System.Drawing.Size(545, 26);
             this.tCompleted.TabIndex = 10;
             this.tCompleted.Visible = false;
             this.tCompleted.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
@@ -208,7 +208,7 @@
             // 
             // submit
             // 
-            this.submit.Location = new System.Drawing.Point(1304, 488);
+            this.submit.Location = new System.Drawing.Point(1270, 488);
             this.submit.Name = "submit";
             this.submit.Size = new System.Drawing.Size(92, 33);
             this.submit.TabIndex = 15;
@@ -220,7 +220,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1478, 944);
+            this.ClientSize = new System.Drawing.Size(1849, 1050);
             this.Controls.Add(this.submit);
             this.Controls.Add(this.lCompleted);
             this.Controls.Add(this.lAssigned);
