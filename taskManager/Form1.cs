@@ -56,6 +56,8 @@ namespace taskManager
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             listView1.Visible = true;
+            //next line breaks when non existing index is chosen
+            //throw in  a try catch, and update label possibly?
             name.Text = listBox1.SelectedItem.ToString();
             description.Text = getBackWork().listDescription;
             assignedTo.Text = getBackWork().assigned;
@@ -103,6 +105,18 @@ namespace taskManager
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void submit_Click(object sender, EventArgs e)
+        {
+            var item1 = new myList
+            {
+                listName = tName.Text,
+                listDescription = tDescription.Text,
+                assigned = tAssigned.Text,
+                state = tCompleted.Text
+            };
+            listBox1.Items.Add(item1.listName);
         }
     }
 }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
             "",
             ""}, -1);
             this.listView1 = new System.Windows.Forms.ListView();
@@ -57,7 +57,7 @@
             this.columnHeader1});
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem4});
             this.listView1.Location = new System.Drawing.Point(607, 286);
             this.listView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listView1.Name = "listView1";
@@ -223,6 +223,7 @@
             this.submit.Text = "Submit";
             this.submit.UseVisualStyleBackColor = true;
             this.submit.Visible = false;
+            this.submit.Click += new System.EventHandler(this.submit_Click);
             // 
             // TMSName
             // 
@@ -230,10 +231,10 @@
             this.TMSName.ForeColor = System.Drawing.Color.Maroon;
             this.TMSName.Location = new System.Drawing.Point(579, 29);
             this.TMSName.Name = "TMSName";
-            this.TMSName.Size = new System.Drawing.Size(698, 114);
+            this.TMSName.Size = new System.Drawing.Size(698, 109);
             this.TMSName.TabIndex = 16;
-            this.TMSName.Text = "label1";
-            this.TMSName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.TMSName.Text = "TMS";
+            this.TMSName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.TMSName.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form1
