@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "",
             ""}, -1);
             this.listView1 = new System.Windows.Forms.ListView();
@@ -48,6 +48,7 @@
             this.lAssigned = new System.Windows.Forms.Label();
             this.lCompleted = new System.Windows.Forms.Label();
             this.submit = new System.Windows.Forms.Button();
+            this.TMSName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listView1
@@ -56,8 +57,8 @@
             this.columnHeader1});
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem12});
-            this.listView1.Location = new System.Drawing.Point(547, 217);
+            listViewItem1});
+            this.listView1.Location = new System.Drawing.Point(607, 286);
             this.listView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(520, 304);
@@ -70,7 +71,7 @@
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(32, 217);
+            this.listBox1.Location = new System.Drawing.Point(26, 286);
             this.listBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(466, 304);
@@ -81,7 +82,8 @@
             // name
             // 
             this.name.AutoSize = true;
-            this.name.Location = new System.Drawing.Point(606, 257);
+            this.name.BackColor = System.Drawing.Color.White;
+            this.name.Location = new System.Drawing.Point(666, 326);
             this.name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(51, 20);
@@ -91,7 +93,8 @@
             // 
             // description
             // 
-            this.description.Location = new System.Drawing.Point(864, 257);
+            this.description.BackColor = System.Drawing.Color.White;
+            this.description.Location = new System.Drawing.Point(924, 326);
             this.description.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.description.MinimumSize = new System.Drawing.Size(30, 50);
             this.description.Name = "description";
@@ -103,7 +106,8 @@
             // assignedTo
             // 
             this.assignedTo.AutoSize = true;
-            this.assignedTo.Location = new System.Drawing.Point(606, 417);
+            this.assignedTo.BackColor = System.Drawing.Color.White;
+            this.assignedTo.Location = new System.Drawing.Point(666, 486);
             this.assignedTo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.assignedTo.Name = "assignedTo";
             this.assignedTo.Size = new System.Drawing.Size(51, 20);
@@ -114,7 +118,8 @@
             // state
             // 
             this.state.AutoSize = true;
-            this.state.Location = new System.Drawing.Point(864, 417);
+            this.state.BackColor = System.Drawing.Color.White;
+            this.state.Location = new System.Drawing.Point(924, 486);
             this.state.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.state.Name = "state";
             this.state.Size = new System.Drawing.Size(51, 20);
@@ -124,7 +129,7 @@
             // 
             // showList
             // 
-            this.showList.Location = new System.Drawing.Point(32, 56);
+            this.showList.Location = new System.Drawing.Point(26, 193);
             this.showList.Name = "showList";
             this.showList.Size = new System.Drawing.Size(143, 56);
             this.showList.TabIndex = 6;
@@ -134,33 +139,35 @@
             // 
             // tName
             // 
-            this.tName.Location = new System.Drawing.Point(1270, 228);
+            this.tName.Location = new System.Drawing.Point(1377, 286);
             this.tName.Name = "tName";
-            this.tName.Size = new System.Drawing.Size(545, 26);
+            this.tName.Size = new System.Drawing.Size(407, 26);
             this.tName.TabIndex = 7;
             this.tName.Visible = false;
             // 
             // tDescription
             // 
-            this.tDescription.Location = new System.Drawing.Point(1270, 294);
+            this.tDescription.Location = new System.Drawing.Point(1377, 339);
+            this.tDescription.Multiline = true;
             this.tDescription.Name = "tDescription";
-            this.tDescription.Size = new System.Drawing.Size(545, 26);
+            this.tDescription.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tDescription.Size = new System.Drawing.Size(407, 78);
             this.tDescription.TabIndex = 8;
             this.tDescription.Visible = false;
             // 
             // tAssigned
             // 
-            this.tAssigned.Location = new System.Drawing.Point(1270, 364);
+            this.tAssigned.Location = new System.Drawing.Point(1377, 446);
             this.tAssigned.Name = "tAssigned";
-            this.tAssigned.Size = new System.Drawing.Size(545, 26);
+            this.tAssigned.Size = new System.Drawing.Size(407, 26);
             this.tAssigned.TabIndex = 9;
             this.tAssigned.Visible = false;
             // 
             // tCompleted
             // 
-            this.tCompleted.Location = new System.Drawing.Point(1270, 430);
+            this.tCompleted.Location = new System.Drawing.Point(1377, 505);
             this.tCompleted.Name = "tCompleted";
-            this.tCompleted.Size = new System.Drawing.Size(545, 26);
+            this.tCompleted.Size = new System.Drawing.Size(407, 26);
             this.tCompleted.TabIndex = 10;
             this.tCompleted.Visible = false;
             this.tCompleted.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
@@ -168,17 +175,18 @@
             // lName
             // 
             this.lName.AutoSize = true;
-            this.lName.Location = new System.Drawing.Point(1123, 231);
+            this.lName.Location = new System.Drawing.Point(1230, 286);
             this.lName.Name = "lName";
             this.lName.Size = new System.Drawing.Size(51, 20);
             this.lName.TabIndex = 11;
             this.lName.Text = "Name";
             this.lName.Visible = false;
+            this.lName.Click += new System.EventHandler(this.lName_Click);
             // 
             // lDescription
             // 
             this.lDescription.AutoSize = true;
-            this.lDescription.Location = new System.Drawing.Point(1123, 300);
+            this.lDescription.Location = new System.Drawing.Point(1230, 342);
             this.lDescription.Name = "lDescription";
             this.lDescription.Size = new System.Drawing.Size(89, 20);
             this.lDescription.TabIndex = 12;
@@ -188,7 +196,7 @@
             // lAssigned
             // 
             this.lAssigned.AutoSize = true;
-            this.lAssigned.Location = new System.Drawing.Point(1123, 367);
+            this.lAssigned.Location = new System.Drawing.Point(1230, 452);
             this.lAssigned.Name = "lAssigned";
             this.lAssigned.Size = new System.Drawing.Size(121, 20);
             this.lAssigned.TabIndex = 13;
@@ -198,7 +206,7 @@
             // lCompleted
             // 
             this.lCompleted.AutoSize = true;
-            this.lCompleted.Location = new System.Drawing.Point(1123, 433);
+            this.lCompleted.Location = new System.Drawing.Point(1230, 505);
             this.lCompleted.Name = "lCompleted";
             this.lCompleted.Size = new System.Drawing.Size(86, 20);
             this.lCompleted.TabIndex = 14;
@@ -208,7 +216,7 @@
             // 
             // submit
             // 
-            this.submit.Location = new System.Drawing.Point(1270, 488);
+            this.submit.Location = new System.Drawing.Point(1377, 557);
             this.submit.Name = "submit";
             this.submit.Size = new System.Drawing.Size(92, 33);
             this.submit.TabIndex = 15;
@@ -216,11 +224,25 @@
             this.submit.UseVisualStyleBackColor = true;
             this.submit.Visible = false;
             // 
+            // TMSName
+            // 
+            this.TMSName.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TMSName.ForeColor = System.Drawing.Color.Maroon;
+            this.TMSName.Location = new System.Drawing.Point(579, 29);
+            this.TMSName.Name = "TMSName";
+            this.TMSName.Size = new System.Drawing.Size(698, 114);
+            this.TMSName.TabIndex = 16;
+            this.TMSName.Text = "label1";
+            this.TMSName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.TMSName.Click += new System.EventHandler(this.label1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Aqua;
             this.ClientSize = new System.Drawing.Size(1849, 1050);
+            this.Controls.Add(this.TMSName);
             this.Controls.Add(this.submit);
             this.Controls.Add(this.lCompleted);
             this.Controls.Add(this.lAssigned);
@@ -265,6 +287,7 @@
         private System.Windows.Forms.Label lAssigned;
         private System.Windows.Forms.Label lCompleted;
         private System.Windows.Forms.Button submit;
+        private System.Windows.Forms.Label TMSName;
     }
 }
 
