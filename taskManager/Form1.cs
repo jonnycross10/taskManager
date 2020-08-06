@@ -37,12 +37,15 @@ namespace taskManager
   
         public Form1()
         {
+            
+            //this.AutoSize = true;
             InitializeComponent();
-
+            //set the damn size
+            this.Size = new Size(1000, 1500);
             myList item1 = getBackWork();
             listBox1.Items.Add(item1.listName); //adds listname to the itemBox
         }
-
+        
        
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
