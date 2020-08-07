@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -121,14 +122,17 @@ namespace taskManager
 
 
 
-        private void showList_MouseHover_1(object sender, EventArgs e)
+        private async void showList_MouseHover_1(object sender, EventArgs e)
         {
             showList.ForeColor = Color.White;
+            await Task.Delay(500);
+            suggestionLabel1.Visible = true;
         }
 
         private void showList_MouseLeave(object sender, EventArgs e)
         {
             showList.ForeColor = Color.Black;
+            suggestionLabel1.Visible = false;
         }
     }
 }

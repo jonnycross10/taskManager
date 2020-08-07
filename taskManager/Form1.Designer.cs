@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "",
             ""}, -1);
             this.listView1 = new System.Windows.Forms.ListView();
@@ -49,6 +49,7 @@
             this.submit = new System.Windows.Forms.Button();
             this.TMSName = new System.Windows.Forms.Label();
             this.showList = new System.Windows.Forms.Button();
+            this.suggestionLabel1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listView1
@@ -58,7 +59,7 @@
             this.columnHeader1});
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem5});
+            listViewItem1});
             this.listView1.Location = new System.Drawing.Point(607, 286);
             this.listView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listView1.Name = "listView1";
@@ -266,12 +267,24 @@
             this.showList.MouseLeave += new System.EventHandler(this.showList_MouseLeave);
             this.showList.MouseHover += new System.EventHandler(this.showList_MouseHover_1);
             // 
+            // suggestionLabel1
+            // 
+            this.suggestionLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.suggestionLabel1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.suggestionLabel1.Location = new System.Drawing.Point(153, 208);
+            this.suggestionLabel1.Name = "suggestionLabel1";
+            this.suggestionLabel1.Size = new System.Drawing.Size(144, 54);
+            this.suggestionLabel1.TabIndex = 17;
+            this.suggestionLabel1.Text = "Click to add a new \r\nitem to the list!";
+            this.suggestionLabel1.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(1849, 1050);
+            this.Controls.Add(this.suggestionLabel1);
             this.Controls.Add(this.TMSName);
             this.Controls.Add(this.submit);
             this.Controls.Add(this.lCompleted);
@@ -318,6 +331,7 @@
         private System.Windows.Forms.Label lCompleted;
         private System.Windows.Forms.Button submit;
         private System.Windows.Forms.Label TMSName;
+        private System.Windows.Forms.Label suggestionLabel1;
     }
 }
 
