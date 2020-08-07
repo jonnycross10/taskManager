@@ -50,6 +50,7 @@
             this.TMSName = new System.Windows.Forms.Label();
             this.showList = new System.Windows.Forms.Button();
             this.suggestionLabel1 = new System.Windows.Forms.Label();
+            this.suggestionLabel2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listView1
@@ -259,7 +260,7 @@
             this.showList.Image = global::taskManager.Properties.Resources.thisisit;
             this.showList.Location = new System.Drawing.Point(91, 150);
             this.showList.Name = "showList";
-            this.showList.Size = new System.Drawing.Size(77, 74);
+            this.showList.Size = new System.Drawing.Size(80, 85);
             this.showList.TabIndex = 6;
             this.showList.Text = " +";
             this.showList.UseVisualStyleBackColor = true;
@@ -271,12 +272,23 @@
             // 
             this.suggestionLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.suggestionLabel1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.suggestionLabel1.Location = new System.Drawing.Point(153, 208);
+            this.suggestionLabel1.Location = new System.Drawing.Point(155, 214);
             this.suggestionLabel1.Name = "suggestionLabel1";
-            this.suggestionLabel1.Size = new System.Drawing.Size(144, 54);
+            this.suggestionLabel1.Size = new System.Drawing.Size(142, 51);
             this.suggestionLabel1.TabIndex = 17;
-            this.suggestionLabel1.Text = "Click to add a new \r\nitem to the list!";
+            this.suggestionLabel1.Text = "Click to create\r\na new List!";
             this.suggestionLabel1.Visible = false;
+            // 
+            // suggestionLabel2
+            // 
+            this.suggestionLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.suggestionLabel2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.suggestionLabel2.Location = new System.Drawing.Point(155, 214);
+            this.suggestionLabel2.Name = "suggestionLabel2";
+            this.suggestionLabel2.Size = new System.Drawing.Size(142, 51);
+            this.suggestionLabel2.TabIndex = 18;
+            this.suggestionLabel2.Text = "Click to hide!";
+            this.suggestionLabel2.Visible = false;
             // 
             // Form1
             // 
@@ -284,6 +296,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(1849, 1050);
+            this.Controls.Add(this.suggestionLabel2);
             this.Controls.Add(this.suggestionLabel1);
             this.Controls.Add(this.TMSName);
             this.Controls.Add(this.submit);
@@ -332,6 +345,7 @@
         private System.Windows.Forms.Button submit;
         private System.Windows.Forms.Label TMSName;
         private System.Windows.Forms.Label suggestionLabel1;
+        private System.Windows.Forms.Label suggestionLabel2;
     }
 }
 

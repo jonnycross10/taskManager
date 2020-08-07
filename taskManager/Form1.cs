@@ -69,18 +69,37 @@ namespace taskManager
             assignedTo.Visible = true;
             state.Visible = true;
         }
-
+        bool shown = false;
         private void button1_Click(object sender, EventArgs e)
         {
-            lName.Visible = true;
-            tName.Visible = true;
-            lDescription.Visible = true;
-            tDescription.Visible = true;
-            lAssigned.Visible = true;
-            tAssigned.Visible = true;
-            lCompleted.Visible = true;
-            tCompleted.Visible = true;
-            submit.Visible = true;
+            if (!shown)
+            {
+                showList.Text="-";
+                lName.Visible = true;
+                tName.Visible = true;
+                lDescription.Visible = true;
+                tDescription.Visible = true;
+                lAssigned.Visible = true;
+                tAssigned.Visible = true;
+                lCompleted.Visible = true;
+                tCompleted.Visible = true;
+                submit.Visible = true;
+                shown = true;
+            }
+            else
+            {
+                showList.Text="+";
+                lName.Visible = false;
+                tName.Visible = false;
+                lDescription.Visible = false;
+                tDescription.Visible = false;
+                lAssigned.Visible = false;
+                tAssigned.Visible = false;
+                lCompleted.Visible = false;
+                tCompleted.Visible = false;
+                submit.Visible = false;
+                shown = false;
+            }
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
@@ -124,15 +143,25 @@ namespace taskManager
 
         private async void showList_MouseHover_1(object sender, EventArgs e)
         {
-            showList.ForeColor = Color.White;
-            await Task.Delay(500);
-            suggestionLabel1.Visible = true;
+            if(!shown)
+            {
+                showList.ForeColor = Color.White;
+                await Task.Delay(500);
+                suggestionLabel1.Visible = true;
+            }
+            if(shown)
+            {
+                showList.ForeColor = Color.White;
+                await Task.Delay(500);
+                suggestionLabel2.Visible = true;
+            }
         }
 
         private void showList_MouseLeave(object sender, EventArgs e)
         {
             showList.ForeColor = Color.Black;
             suggestionLabel1.Visible = false;
+            suggestionLabel2.Visible = false;
         }
     }
 }
