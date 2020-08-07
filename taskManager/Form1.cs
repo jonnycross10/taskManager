@@ -118,5 +118,17 @@ namespace taskManager
             };
             listBox1.Items.Add(item1.listName);
         }
+
+
+
+        private void showList_MouseHover_1(object sender, EventArgs e)
+        {
+            showList.ForeColor = Color.White;
+        }
+
+        private void showList_MouseLeave(object sender, EventArgs e)
+        {
+            showList.ForeColor = Color.Black;
+        }
     }
 }

@@ -65,6 +65,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +79,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orange-circle-hi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\180-1806930_welcome-to-zeamu-transparent-orange-circles-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pls.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maybe_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thisisit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

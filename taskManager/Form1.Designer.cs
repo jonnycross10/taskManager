@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
             "",
             ""}, -1);
             this.listView1 = new System.Windows.Forms.ListView();
@@ -38,7 +38,6 @@
             this.description = new System.Windows.Forms.Label();
             this.assignedTo = new System.Windows.Forms.Label();
             this.state = new System.Windows.Forms.Label();
-            this.showList = new System.Windows.Forms.Button();
             this.tName = new System.Windows.Forms.TextBox();
             this.tDescription = new System.Windows.Forms.TextBox();
             this.tAssigned = new System.Windows.Forms.TextBox();
@@ -49,6 +48,7 @@
             this.lCompleted = new System.Windows.Forms.Label();
             this.submit = new System.Windows.Forms.Button();
             this.TMSName = new System.Windows.Forms.Label();
+            this.showList = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listView1
@@ -58,7 +58,7 @@
             this.columnHeader1});
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem3});
+            listViewItem5});
             this.listView1.Location = new System.Drawing.Point(607, 286);
             this.listView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listView1.Name = "listView1";
@@ -138,16 +138,6 @@
             this.state.TabIndex = 5;
             this.state.Text = "label4";
             this.state.Visible = false;
-            // 
-            // showList
-            // 
-            this.showList.Location = new System.Drawing.Point(26, 193);
-            this.showList.Name = "showList";
-            this.showList.Size = new System.Drawing.Size(143, 56);
-            this.showList.TabIndex = 6;
-            this.showList.Text = "Add List Item";
-            this.showList.UseVisualStyleBackColor = true;
-            this.showList.Click += new System.EventHandler(this.button1_Click);
             // 
             // tName
             // 
@@ -256,6 +246,25 @@
             this.TMSName.Text = "TMS";
             this.TMSName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.TMSName.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // showList
+            // 
+            this.showList.FlatAppearance.BorderSize = 0;
+            this.showList.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.showList.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.showList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showList.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showList.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.showList.Image = global::taskManager.Properties.Resources.thisisit;
+            this.showList.Location = new System.Drawing.Point(91, 150);
+            this.showList.Name = "showList";
+            this.showList.Size = new System.Drawing.Size(77, 74);
+            this.showList.TabIndex = 6;
+            this.showList.Text = " +";
+            this.showList.UseVisualStyleBackColor = true;
+            this.showList.Click += new System.EventHandler(this.button1_Click);
+            this.showList.MouseLeave += new System.EventHandler(this.showList_MouseLeave);
+            this.showList.MouseHover += new System.EventHandler(this.showList_MouseHover_1);
             // 
             // Form1
             // 
