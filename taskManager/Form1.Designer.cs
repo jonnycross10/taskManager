@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new string[] {
             "",
             ""}, -1);
             this.listView1 = new System.Windows.Forms.ListView();
@@ -60,7 +60,7 @@
             this.columnHeader1});
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem3});
+            listViewItem7});
             this.listView1.Location = new System.Drawing.Point(607, 286);
             this.listView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listView1.Name = "listView1";
@@ -174,7 +174,6 @@
             this.tCompleted.Size = new System.Drawing.Size(407, 26);
             this.tCompleted.TabIndex = 10;
             this.tCompleted.Visible = false;
-            this.tCompleted.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // lName
             // 
@@ -187,7 +186,6 @@
             this.lName.TabIndex = 11;
             this.lName.Text = "Name";
             this.lName.Visible = false;
-            this.lName.Click += new System.EventHandler(this.lName_Click);
             // 
             // lDescription
             // 
@@ -224,7 +222,6 @@
             this.lCompleted.TabIndex = 14;
             this.lCompleted.Text = "Completed";
             this.lCompleted.Visible = false;
-            this.lCompleted.Click += new System.EventHandler(this.label4_Click);
             // 
             // submit
             // 
@@ -247,7 +244,6 @@
             this.TMSName.TabIndex = 16;
             this.TMSName.Text = "TMS";
             this.TMSName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.TMSName.Click += new System.EventHandler(this.label1_Click);
             // 
             // showList
             // 
