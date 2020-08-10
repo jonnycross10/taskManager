@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,7 @@ namespace taskManager
 {
     public partial class Form1 : Form
     {
+        
         public class myList
         {
             public string listName { get; set; }
@@ -22,7 +24,9 @@ namespace taskManager
 
             public string state { get; set; }
         }
-       public myList getBackWork()
+
+        public static List<myList> listLog = new List<myList>();
+        public myList getBackWork()
         {
             
             string nListName = "Work";
@@ -43,7 +47,7 @@ namespace taskManager
             InitializeComponent();
             //set the damn size
             this.Size = new Size(1500, 1400);
-            
+
             myList item1 = getBackWork();
             listBox1.Items.Add(item1.listName); //adds listname to the itemBox
         }
@@ -63,6 +67,8 @@ namespace taskManager
             description.Text = getBackWork().listDescription;
             assignedTo.Text = getBackWork().assigned;
             state.Text = getBackWork().state;
+            
+
             listView1.Visible = true;
             name.Visible = true;
             description.Visible = true;
@@ -88,6 +94,7 @@ namespace taskManager
             }
             else
             {
+                //put into its own method and pass in bool
                 showList.Text="+";
                 lName.Visible = false;
                 tName.Visible = false;
@@ -136,13 +143,19 @@ namespace taskManager
                 assigned = tAssigned.Text,
                 state = tCompleted.Text
             };
-            listBox1.Items.Add(item1.listName);
+            listBox1.Items.Add(item1);
+            listLog.Add(item1);
+            tName.Text = "";
+            tDescription.Text = "";
+            tAssigned.Text = "";
+            tCompleted.Text = "";
         }
 
 
 
         private async void showList_MouseHover_1(object sender, EventArgs e)
         {
+            //check if 
             if(!shown)
             {
                 showList.ForeColor = Color.White;
