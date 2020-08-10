@@ -49,7 +49,7 @@ namespace taskManager
             this.Size = new Size(1500, 1400);
 
             myList item1 = getBackWork();
-            listBox1.Items.Add(item1.listName); //adds listname to the itemBox
+            //listBox1.Items.Add(item1.listName); //adds listname to the itemBox
         }
         
        
@@ -61,12 +61,15 @@ namespace taskManager
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             listView1.Visible = true;
+            int i = listBox1.SelectedIndex;
             //next line breaks when non existing index is chosen
             //throw in  a try catch, and update label possibly?
-            name.Text = listBox1.SelectedItem.ToString();
-            description.Text = getBackWork().listDescription;
-            assignedTo.Text = getBackWork().assigned;
-            state.Text = getBackWork().state;
+            name.Text = listLog[i].listName;
+            //description.Text = listBox1.SelectedIndex.ToString();
+            description.Text = listLog[i].listDescription;
+            //description.Text = getBackWork().listDescription;
+            assignedTo.Text = listLog[i].assigned;
+            state.Text = listLog[i].state;
             
 
             listView1.Visible = true;
@@ -143,7 +146,7 @@ namespace taskManager
                 assigned = tAssigned.Text,
                 state = tCompleted.Text
             };
-            listBox1.Items.Add(item1);
+            listBox1.Items.Add(item1.listName);
             listLog.Add(item1);
             tName.Text = "";
             tDescription.Text = "";
