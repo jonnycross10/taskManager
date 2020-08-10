@@ -26,30 +26,12 @@ namespace taskManager
         }
 
         public static List<myList> listLog = new List<myList>();
-        public myList getBackWork()
-        {
-            
-            string nListName = "Work";
-            string nListDescription = "Work at petsmart from 9:00 am to 5:30";
-            string nAssigned = "Jonny";
-            string nState = "incomplete";
-
-            listBox1.DisplayMember = "list1";
-            var item1 = new myList { listName = nListName, listDescription = nListDescription, 
-            assigned = nAssigned, state = nState};
-            return (item1);
-        }
+        
   
         public Form1()
-        {
-            
-            //this.AutoSize = true;
+        {   
             InitializeComponent();
-            //set the damn size
             this.Size = new Size(1500, 1400);
-
-            myList item1 = getBackWork();
-            //listBox1.Items.Add(item1.listName); //adds listname to the itemBox
         }
         
        
@@ -62,12 +44,10 @@ namespace taskManager
         {
             listView1.Visible = true;
             int i = listBox1.SelectedIndex;
-            //next line breaks when non existing index is chosen
-            //throw in  a try catch, and update label possibly?
+
+
             name.Text = listLog[i].listName;
-            //description.Text = listBox1.SelectedIndex.ToString();
             description.Text = listLog[i].listDescription;
-            //description.Text = getBackWork().listDescription;
             assignedTo.Text = listLog[i].assigned;
             state.Text = listLog[i].state;
             
