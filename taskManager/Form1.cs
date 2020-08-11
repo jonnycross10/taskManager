@@ -42,21 +42,26 @@ namespace taskManager
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            listView1.Visible = true;
-            int i = listBox1.SelectedIndex;
+            try
+            {
+                listView1.Visible = true;
+                int i = listBox1.SelectedIndex;
+                name.Text = listLog[i].listName;
+                description.Text = listLog[i].listDescription;
+                assignedTo.Text = listLog[i].assigned;
+                state.Text = listLog[i].state;
 
 
-            name.Text = listLog[i].listName;
-            description.Text = listLog[i].listDescription;
-            assignedTo.Text = listLog[i].assigned;
-            state.Text = listLog[i].state;
-            
-
-            listView1.Visible = true;
-            name.Visible = true;
-            description.Visible = true;
-            assignedTo.Visible = true;
-            state.Visible = true;
+                listView1.Visible = true;
+                name.Visible = true;
+                description.Visible = true;
+                assignedTo.Visible = true;
+                state.Visible = true;
+            }
+            catch(System.ArgumentOutOfRangeException)
+            {
+                errorLabel.Text = "Please select an existing index";
+            }
         }
         bool shown = false;
         private void button1_Click(object sender, EventArgs e)
