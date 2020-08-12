@@ -44,6 +44,7 @@ namespace taskManager
         {
             try
             {
+                errorLabel.Visible = false;
                 listView1.Visible = true;
                 int i = listBox1.SelectedIndex;
                 name.Text = listLog[i].listName;
@@ -60,6 +61,8 @@ namespace taskManager
             }
             catch(System.ArgumentOutOfRangeException)
             {
+                errorLabel.Visible = true;
+                errorLabel.Location = new Point(Cursor.Position.X-7, Cursor.Position.Y-45);
                 errorLabel.Text = "Please select an existing index";
             }
         }

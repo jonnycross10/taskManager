@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
             "",
             ""}, -1);
             this.listView1 = new System.Windows.Forms.ListView();
@@ -61,7 +61,7 @@
             this.columnHeader1});
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem4});
             this.listView1.Location = new System.Drawing.Point(607, 286);
             this.listView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listView1.Name = "listView1";
@@ -290,10 +290,14 @@
             // errorLabel
             // 
             this.errorLabel.AutoSize = true;
-            this.errorLabel.Location = new System.Drawing.Point(540, 128);
+            this.errorLabel.BackColor = System.Drawing.Color.Transparent;
+            this.errorLabel.ForeColor = System.Drawing.Color.White;
+            this.errorLabel.Location = new System.Drawing.Point(145, 387);
             this.errorLabel.Name = "errorLabel";
-            this.errorLabel.Size = new System.Drawing.Size(0, 20);
+            this.errorLabel.Size = new System.Drawing.Size(100, 20);
             this.errorLabel.TabIndex = 19;
+            this.errorLabel.Text = "dont lose me";
+            this.errorLabel.Visible = false;
             // 
             // Form1
             // 
