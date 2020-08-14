@@ -146,6 +146,17 @@ namespace taskManager
             showList.ForeColor = Color.Black;
             suggestionLabel1.Visible = false;
             suggestionLabel2.Visible = false;
+            
+        }
+
+        public delegate void delPassData(TextBox text);
+
+        private void signInBtn_Click(object sender, EventArgs e)
+        {
+            SignIn s = new SignIn();
+            delPassData del = new delPassData(s.signInName);
+            del(this.tName);
+            s.Show();
         }
     }
 }

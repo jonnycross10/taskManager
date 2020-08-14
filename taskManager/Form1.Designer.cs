@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "",
             ""}, -1);
             this.listView1 = new System.Windows.Forms.ListView();
@@ -52,6 +52,7 @@
             this.suggestionLabel1 = new System.Windows.Forms.Label();
             this.suggestionLabel2 = new System.Windows.Forms.Label();
             this.errorLabel = new System.Windows.Forms.Label();
+            this.signInBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listView1
@@ -61,7 +62,7 @@
             this.columnHeader1});
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem4});
+            listViewItem1});
             this.listView1.Location = new System.Drawing.Point(607, 286);
             this.listView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listView1.Name = "listView1";
@@ -299,12 +300,24 @@
             this.errorLabel.Text = "dont lose me";
             this.errorLabel.Visible = false;
             // 
+            // signInBtn
+            // 
+            this.signInBtn.BackColor = System.Drawing.Color.Transparent;
+            this.signInBtn.Location = new System.Drawing.Point(1478, 29);
+            this.signInBtn.Name = "signInBtn";
+            this.signInBtn.Size = new System.Drawing.Size(75, 23);
+            this.signInBtn.TabIndex = 20;
+            this.signInBtn.Text = "Sign In";
+            this.signInBtn.UseVisualStyleBackColor = false;
+            this.signInBtn.Click += new System.EventHandler(this.signInBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(1849, 1050);
+            this.Controls.Add(this.signInBtn);
             this.Controls.Add(this.errorLabel);
             this.Controls.Add(this.suggestionLabel2);
             this.Controls.Add(this.suggestionLabel1);
@@ -357,6 +370,7 @@
         private System.Windows.Forms.Label suggestionLabel1;
         private System.Windows.Forms.Label suggestionLabel2;
         private System.Windows.Forms.Label errorLabel;
+        private System.Windows.Forms.Button signInBtn;
     }
 }
 
