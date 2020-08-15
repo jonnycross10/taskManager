@@ -19,11 +19,6 @@ namespace taskManager
             f = f1;
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         public delegate void delPassData(TextBox text);
 
         private void signInButton_Click(object sender, EventArgs e)
