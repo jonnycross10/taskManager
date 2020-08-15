@@ -53,6 +53,7 @@
             this.suggestionLabel2 = new System.Windows.Forms.Label();
             this.errorLabel = new System.Windows.Forms.Label();
             this.signInBtn = new System.Windows.Forms.Button();
+            this.nameLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listView1
@@ -311,12 +312,23 @@
             this.signInBtn.UseVisualStyleBackColor = false;
             this.signInBtn.Click += new System.EventHandler(this.signInBtn_Click);
             // 
+            // nameLabel
+            // 
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.ForeColor = System.Drawing.Color.White;
+            this.nameLabel.Location = new System.Drawing.Point(189, 29);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(51, 20);
+            this.nameLabel.TabIndex = 21;
+            this.nameLabel.Text = "label1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(1849, 1050);
+            this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.signInBtn);
             this.Controls.Add(this.errorLabel);
             this.Controls.Add(this.suggestionLabel2);
@@ -371,6 +383,7 @@
         private System.Windows.Forms.Label suggestionLabel2;
         private System.Windows.Forms.Label errorLabel;
         private System.Windows.Forms.Button signInBtn;
+        private System.Windows.Forms.Label nameLabel;
     }
 }
 

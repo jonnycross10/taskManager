@@ -12,14 +12,32 @@ namespace taskManager
 {
     public partial class SignIn : Form
     {
-        public SignIn()
+        Form1 f;
+        public SignIn(Form1 f1)
         {
             InitializeComponent();
+            f = f1;
         }
 
         public void signInName(TextBox t)
         {
             nameBox.Text = t.Text;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public delegate void delPassData(TextBox text);
+
+        private void signInButton_Click(object sender, EventArgs e)
+        {
+            
+            delPassData del = new delPassData(f.signInName);
+            del(this.nameBox);
+            f.Show();
+            
         }
     }
 }

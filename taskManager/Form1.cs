@@ -26,12 +26,14 @@ namespace taskManager
         }
 
         public static List<myList> listLog = new List<myList>();
-        
+
+        SignIn s;
   
         public Form1()
         {   
             InitializeComponent();
             this.Size = new Size(1500, 1400);
+            s = new SignIn(this);
         }
         
        
@@ -150,13 +152,18 @@ namespace taskManager
         }
 
         public delegate void delPassData(TextBox text);
-
+        
         private void signInBtn_Click(object sender, EventArgs e)
         {
-            SignIn s = new SignIn();
+            
             delPassData del = new delPassData(s.signInName);
             del(this.tName);
             s.Show();
+        }
+
+        public void signInName(TextBox t)
+        {
+            nameLabel.Text = t.Text;
         }
     }
 }
