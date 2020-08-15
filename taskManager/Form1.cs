@@ -159,7 +159,7 @@ namespace taskManager
 
         public void signInName(TextBox t)
         {
-            nameLabel.Text = t.Text;
+            nameLabel.Text = " Hello, " + t.Text;
         }
     }
 }
