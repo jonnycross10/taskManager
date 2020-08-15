@@ -19,11 +19,6 @@ namespace taskManager
             f = f1;
         }
 
-        public void signInName(TextBox t)
-        {
-            nameBox.Text = t.Text;
-        }
-
         private void label3_Click(object sender, EventArgs e)
         {
 
