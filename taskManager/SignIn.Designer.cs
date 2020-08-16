@@ -82,6 +82,7 @@
             this.passBox.Name = "passBox";
             this.passBox.Size = new System.Drawing.Size(162, 26);
             this.passBox.TabIndex = 4;
+            this.passBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.passBox_KeyPress);
             // 
             // signInButton
             // 

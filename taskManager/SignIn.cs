@@ -37,5 +37,12 @@ namespace taskManager
                 errorLabel.Text = "user name and password must not be blank";
             }
         }
+
+        string passHolder;
+        private void passBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            passHolder = passHolder + e.KeyChar;
+            passBox.Text = "\u2022";
+        }
     }
 }
