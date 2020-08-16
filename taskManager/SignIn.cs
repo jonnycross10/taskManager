@@ -24,10 +24,18 @@ namespace taskManager
         private void signInButton_Click(object sender, EventArgs e)
         {
             
-            delPassData del = new delPassData(f.signInName);
-            del(this.nameBox);
-            f.Show();
             
+            if (nameBox.Text != "" && passBox.Text != "")
+            {
+                delPassData del = new delPassData(f.signInName);
+                del(this.nameBox);
+                f.Show();
+                this.Close();
+            }
+            else
+            {
+                errorLabel.Text = "user name and password must not be blank";
+            }
         }
     }
 }

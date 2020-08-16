@@ -64,9 +64,10 @@
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1});
-            this.listView1.Location = new System.Drawing.Point(405, 186);
+            this.listView1.Location = new System.Drawing.Point(608, 286);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(348, 199);
+            this.listView1.Size = new System.Drawing.Size(520, 304);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.Visible = false;
@@ -78,10 +79,11 @@
             this.listBox1.Font = new System.Drawing.Font("Arial Narrow", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.ForeColor = System.Drawing.Color.Black;
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 23;
-            this.listBox1.Location = new System.Drawing.Point(17, 186);
+            this.listBox1.ItemHeight = 33;
+            this.listBox1.Location = new System.Drawing.Point(26, 286);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(312, 188);
+            this.listBox1.Size = new System.Drawing.Size(466, 268);
             this.listBox1.TabIndex = 1;
             this.listBox1.Tag = "listbox1";
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
@@ -92,9 +94,10 @@
             this.name.BackColor = System.Drawing.Color.MediumOrchid;
             this.name.Font = new System.Drawing.Font("Arial Narrow", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.name.ForeColor = System.Drawing.Color.Black;
-            this.name.Location = new System.Drawing.Point(444, 212);
+            this.name.Location = new System.Drawing.Point(666, 326);
+            this.name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(55, 23);
+            this.name.Size = new System.Drawing.Size(80, 33);
             this.name.TabIndex = 2;
             this.name.Text = "label1";
             this.name.Visible = false;
@@ -104,10 +107,11 @@
             this.description.BackColor = System.Drawing.Color.MediumOrchid;
             this.description.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.description.ForeColor = System.Drawing.Color.Black;
-            this.description.Location = new System.Drawing.Point(617, 212);
-            this.description.MinimumSize = new System.Drawing.Size(20, 32);
+            this.description.Location = new System.Drawing.Point(926, 326);
+            this.description.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.description.MinimumSize = new System.Drawing.Size(30, 49);
             this.description.Name = "description";
-            this.description.Size = new System.Drawing.Size(88, 59);
+            this.description.Size = new System.Drawing.Size(132, 91);
             this.description.TabIndex = 3;
             this.description.Text = "label2";
             this.description.Visible = false;
@@ -118,9 +122,10 @@
             this.assignedTo.BackColor = System.Drawing.Color.MediumOrchid;
             this.assignedTo.Font = new System.Drawing.Font("Arial Narrow", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.assignedTo.ForeColor = System.Drawing.Color.Black;
-            this.assignedTo.Location = new System.Drawing.Point(444, 316);
+            this.assignedTo.Location = new System.Drawing.Point(666, 486);
+            this.assignedTo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.assignedTo.Name = "assignedTo";
-            this.assignedTo.Size = new System.Drawing.Size(55, 23);
+            this.assignedTo.Size = new System.Drawing.Size(80, 33);
             this.assignedTo.TabIndex = 4;
             this.assignedTo.Text = "label3";
             this.assignedTo.Visible = false;
@@ -131,48 +136,45 @@
             this.state.BackColor = System.Drawing.Color.MediumOrchid;
             this.state.Font = new System.Drawing.Font("Arial Narrow", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.state.ForeColor = System.Drawing.Color.Black;
-            this.state.Location = new System.Drawing.Point(616, 316);
+            this.state.Location = new System.Drawing.Point(924, 486);
+            this.state.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.state.Name = "state";
-            this.state.Size = new System.Drawing.Size(55, 23);
+            this.state.Size = new System.Drawing.Size(80, 33);
             this.state.TabIndex = 5;
             this.state.Text = "label4";
             this.state.Visible = false;
             // 
             // tName
             // 
-            this.tName.Location = new System.Drawing.Point(918, 186);
-            this.tName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tName.Location = new System.Drawing.Point(1377, 286);
             this.tName.Name = "tName";
-            this.tName.Size = new System.Drawing.Size(273, 20);
+            this.tName.Size = new System.Drawing.Size(408, 26);
             this.tName.TabIndex = 7;
             this.tName.Visible = false;
             // 
             // tDescription
             // 
-            this.tDescription.Location = new System.Drawing.Point(918, 220);
-            this.tDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tDescription.Location = new System.Drawing.Point(1377, 338);
             this.tDescription.Multiline = true;
             this.tDescription.Name = "tDescription";
             this.tDescription.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tDescription.Size = new System.Drawing.Size(273, 52);
+            this.tDescription.Size = new System.Drawing.Size(408, 78);
             this.tDescription.TabIndex = 8;
             this.tDescription.Visible = false;
             // 
             // tAssigned
             // 
-            this.tAssigned.Location = new System.Drawing.Point(918, 290);
-            this.tAssigned.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tAssigned.Location = new System.Drawing.Point(1377, 446);
             this.tAssigned.Name = "tAssigned";
-            this.tAssigned.Size = new System.Drawing.Size(273, 20);
+            this.tAssigned.Size = new System.Drawing.Size(408, 26);
             this.tAssigned.TabIndex = 9;
             this.tAssigned.Visible = false;
             // 
             // tCompleted
             // 
-            this.tCompleted.Location = new System.Drawing.Point(918, 328);
-            this.tCompleted.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tCompleted.Location = new System.Drawing.Point(1377, 505);
             this.tCompleted.Name = "tCompleted";
-            this.tCompleted.Size = new System.Drawing.Size(273, 20);
+            this.tCompleted.Size = new System.Drawing.Size(408, 26);
             this.tCompleted.TabIndex = 10;
             this.tCompleted.Visible = false;
             // 
@@ -181,10 +183,9 @@
             this.lName.AutoSize = true;
             this.lName.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lName.ForeColor = System.Drawing.Color.White;
-            this.lName.Location = new System.Drawing.Point(820, 186);
-            this.lName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lName.Location = new System.Drawing.Point(1230, 286);
             this.lName.Name = "lName";
-            this.lName.Size = new System.Drawing.Size(37, 17);
+            this.lName.Size = new System.Drawing.Size(54, 24);
             this.lName.TabIndex = 11;
             this.lName.Text = "Name";
             this.lName.Visible = false;
@@ -194,10 +195,9 @@
             this.lDescription.AutoSize = true;
             this.lDescription.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lDescription.ForeColor = System.Drawing.Color.White;
-            this.lDescription.Location = new System.Drawing.Point(820, 222);
-            this.lDescription.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lDescription.Location = new System.Drawing.Point(1230, 342);
             this.lDescription.Name = "lDescription";
-            this.lDescription.Size = new System.Drawing.Size(69, 17);
+            this.lDescription.Size = new System.Drawing.Size(98, 24);
             this.lDescription.TabIndex = 12;
             this.lDescription.Text = "Description";
             this.lDescription.Visible = false;
@@ -207,10 +207,9 @@
             this.lAssigned.AutoSize = true;
             this.lAssigned.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lAssigned.ForeColor = System.Drawing.Color.White;
-            this.lAssigned.Location = new System.Drawing.Point(820, 294);
-            this.lAssigned.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lAssigned.Location = new System.Drawing.Point(1230, 452);
             this.lAssigned.Name = "lAssigned";
-            this.lAssigned.Size = new System.Drawing.Size(92, 17);
+            this.lAssigned.Size = new System.Drawing.Size(132, 24);
             this.lAssigned.TabIndex = 13;
             this.lAssigned.Text = "Users Assigned";
             this.lAssigned.Visible = false;
@@ -220,20 +219,18 @@
             this.lCompleted.AutoSize = true;
             this.lCompleted.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lCompleted.ForeColor = System.Drawing.Color.White;
-            this.lCompleted.Location = new System.Drawing.Point(820, 328);
-            this.lCompleted.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lCompleted.Location = new System.Drawing.Point(1230, 505);
             this.lCompleted.Name = "lCompleted";
-            this.lCompleted.Size = new System.Drawing.Size(66, 17);
+            this.lCompleted.Size = new System.Drawing.Size(93, 24);
             this.lCompleted.TabIndex = 14;
             this.lCompleted.Text = "Completed";
             this.lCompleted.Visible = false;
             // 
             // submit
             // 
-            this.submit.Location = new System.Drawing.Point(918, 362);
-            this.submit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.submit.Location = new System.Drawing.Point(1377, 557);
             this.submit.Name = "submit";
-            this.submit.Size = new System.Drawing.Size(61, 21);
+            this.submit.Size = new System.Drawing.Size(92, 32);
             this.submit.TabIndex = 15;
             this.submit.Text = "Submit";
             this.submit.UseVisualStyleBackColor = true;
@@ -244,10 +241,9 @@
             // 
             this.TMSName.Font = new System.Drawing.Font("Sylfaen", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TMSName.ForeColor = System.Drawing.Color.Black;
-            this.TMSName.Location = new System.Drawing.Point(386, 19);
-            this.TMSName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.TMSName.Location = new System.Drawing.Point(579, 29);
             this.TMSName.Name = "TMSName";
-            this.TMSName.Size = new System.Drawing.Size(465, 71);
+            this.TMSName.Size = new System.Drawing.Size(698, 109);
             this.TMSName.TabIndex = 16;
             this.TMSName.Text = "TMS";
             this.TMSName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -261,10 +257,9 @@
             this.showList.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showList.ForeColor = System.Drawing.SystemColors.ControlText;
             this.showList.Image = global::taskManager.Properties.Resources.thisisit;
-            this.showList.Location = new System.Drawing.Point(61, 97);
-            this.showList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.showList.Location = new System.Drawing.Point(92, 149);
             this.showList.Name = "showList";
-            this.showList.Size = new System.Drawing.Size(53, 55);
+            this.showList.Size = new System.Drawing.Size(80, 85);
             this.showList.TabIndex = 6;
             this.showList.Text = " +";
             this.showList.UseVisualStyleBackColor = true;
@@ -276,10 +271,9 @@
             // 
             this.suggestionLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.suggestionLabel1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.suggestionLabel1.Location = new System.Drawing.Point(103, 139);
-            this.suggestionLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.suggestionLabel1.Location = new System.Drawing.Point(154, 214);
             this.suggestionLabel1.Name = "suggestionLabel1";
-            this.suggestionLabel1.Size = new System.Drawing.Size(95, 33);
+            this.suggestionLabel1.Size = new System.Drawing.Size(142, 51);
             this.suggestionLabel1.TabIndex = 17;
             this.suggestionLabel1.Text = "Click to create\r\na new List!";
             this.suggestionLabel1.Visible = false;
@@ -288,10 +282,9 @@
             // 
             this.suggestionLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.suggestionLabel2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.suggestionLabel2.Location = new System.Drawing.Point(103, 139);
-            this.suggestionLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.suggestionLabel2.Location = new System.Drawing.Point(154, 214);
             this.suggestionLabel2.Name = "suggestionLabel2";
-            this.suggestionLabel2.Size = new System.Drawing.Size(95, 33);
+            this.suggestionLabel2.Size = new System.Drawing.Size(142, 51);
             this.suggestionLabel2.TabIndex = 18;
             this.suggestionLabel2.Text = "Click to hide!";
             this.suggestionLabel2.Visible = false;
@@ -301,10 +294,9 @@
             this.errorLabel.AutoSize = true;
             this.errorLabel.BackColor = System.Drawing.Color.Transparent;
             this.errorLabel.ForeColor = System.Drawing.Color.White;
-            this.errorLabel.Location = new System.Drawing.Point(97, 252);
-            this.errorLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.errorLabel.Location = new System.Drawing.Point(146, 388);
             this.errorLabel.Name = "errorLabel";
-            this.errorLabel.Size = new System.Drawing.Size(67, 13);
+            this.errorLabel.Size = new System.Drawing.Size(100, 20);
             this.errorLabel.TabIndex = 19;
             this.errorLabel.Text = "dont lose me";
             this.errorLabel.Visible = false;
@@ -312,10 +304,9 @@
             // signInBtn
             // 
             this.signInBtn.BackColor = System.Drawing.Color.Transparent;
-            this.signInBtn.Location = new System.Drawing.Point(985, 19);
-            this.signInBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.signInBtn.Location = new System.Drawing.Point(1478, 29);
             this.signInBtn.Name = "signInBtn";
-            this.signInBtn.Size = new System.Drawing.Size(50, 15);
+            this.signInBtn.Size = new System.Drawing.Size(75, 23);
             this.signInBtn.TabIndex = 20;
             this.signInBtn.Text = "Sign In";
             this.signInBtn.UseVisualStyleBackColor = false;
@@ -325,19 +316,17 @@
             // 
             this.nameLabel.AutoSize = true;
             this.nameLabel.ForeColor = System.Drawing.Color.White;
-            this.nameLabel.Location = new System.Drawing.Point(79, 21);
-            this.nameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.nameLabel.Location = new System.Drawing.Point(118, 32);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(35, 13);
+            this.nameLabel.Size = new System.Drawing.Size(0, 20);
             this.nameLabel.TabIndex = 21;
-            this.nameLabel.Text = "label1";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.ClientSize = new System.Drawing.Size(1233, 573);
+            this.ClientSize = new System.Drawing.Size(1850, 882);
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.signInBtn);
             this.Controls.Add(this.errorLabel);
@@ -360,6 +349,7 @@
             this.Controls.Add(this.name);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.listView1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
