@@ -17,7 +17,9 @@ namespace taskManager
         {
             InitializeComponent();
             f = f1;
+            
         }
+        
 
         public delegate void delPassData(TextBox text);
 
@@ -41,8 +43,7 @@ namespace taskManager
         string passHolder;
         private void passBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            passHolder = passHolder + e.KeyChar;
-            passBox.Text = "\u2022";
+            passBox.PasswordChar = '\u2022';
         }
     }
 }
