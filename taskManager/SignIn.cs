@@ -40,7 +40,6 @@ namespace taskManager
             }
         }
 
-        string passHolder;
         private void passBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             passBox.PasswordChar = '\u2022';

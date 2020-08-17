@@ -31,6 +31,7 @@
             System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "",
             ""}, -1);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listBox1 = new System.Windows.Forms.ListBox();
@@ -54,6 +55,7 @@
             this.errorLabel = new System.Windows.Forms.Label();
             this.signInBtn = new System.Windows.Forms.Button();
             this.nameLabel = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listView1
@@ -304,11 +306,16 @@
             // signInBtn
             // 
             this.signInBtn.BackColor = System.Drawing.Color.Transparent;
-            this.signInBtn.Location = new System.Drawing.Point(1478, 29);
+            this.signInBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.signInBtn.FlatAppearance.BorderSize = 0;
+            this.signInBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.signInBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.signInBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.signInBtn.Image = ((System.Drawing.Image)(resources.GetObject("signInBtn.Image")));
+            this.signInBtn.Location = new System.Drawing.Point(1405, 29);
             this.signInBtn.Name = "signInBtn";
-            this.signInBtn.Size = new System.Drawing.Size(75, 23);
+            this.signInBtn.Size = new System.Drawing.Size(172, 88);
             this.signInBtn.TabIndex = 20;
-            this.signInBtn.Text = "Sign In";
             this.signInBtn.UseVisualStyleBackColor = false;
             this.signInBtn.Click += new System.EventHandler(this.signInBtn_Click);
             // 
@@ -321,12 +328,29 @@
             this.nameLabel.Size = new System.Drawing.Size(0, 20);
             this.nameLabel.TabIndex = 21;
             // 
+            // button1
+            // 
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(1583, 29);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(177, 88);
+            this.button1.TabIndex = 22;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1850, 882);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.signInBtn);
             this.Controls.Add(this.errorLabel);
@@ -383,6 +407,7 @@
         private System.Windows.Forms.Label errorLabel;
         private System.Windows.Forms.Button signInBtn;
         private System.Windows.Forms.Label nameLabel;
+        private System.Windows.Forms.Button button1;
     }
 }
 

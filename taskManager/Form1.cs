@@ -161,5 +161,10 @@ namespace taskManager
         {
             nameLabel.Text = " Hello, " + t.Text;
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
