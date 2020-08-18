@@ -60,10 +60,6 @@ namespace taskManager
             state.Visible = b;
             errorLabel.Visible = false;
         }
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
