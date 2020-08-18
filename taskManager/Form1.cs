@@ -36,7 +36,30 @@ namespace taskManager
             s = new SignIn(this);
         }
         
-       
+       public void setSubmitVisibility(bool b)
+        {
+            //showList.Text = "-";
+            lName.Visible = b;
+            tName.Visible = b;
+            lDescription.Visible = b;
+            tDescription.Visible = b;
+            lAssigned.Visible = b;
+            tAssigned.Visible = b;
+            lCompleted.Visible = b;
+            tCompleted.Visible = b;
+            submit.Visible = b;
+            shown = b;
+        }
+        
+        public void setLabelVisibility(bool b)
+        {
+            listView1.Visible = b;
+            name.Visible = b;
+            description.Visible = b;
+            assignedTo.Visible = b;
+            state.Visible = b;
+            errorLabel.Visible = false;
+        }
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -46,10 +69,10 @@ namespace taskManager
         {
             try
             {
-                errorLabel.Visible = false;
-                listView1.Visible = true;
                 int i = listBox1.SelectedIndex;
                 name.Text = listLog[i].listName;
+                errorLabel.Visible = false;
+                listView1.Visible = true;               
                 description.Text = listLog[i].listDescription;
                 assignedTo.Text = listLog[i].assigned;
                 state.Text = listLog[i].state;
@@ -172,7 +195,7 @@ namespace taskManager
             int index = listBox1.SelectedIndex;
             listLog.RemoveAt(index);
             listBox1.Items.RemoveAt(index);
-
+            setLabelVisibility(false);
         }
     }
 }
