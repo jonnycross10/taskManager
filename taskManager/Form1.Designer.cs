@@ -56,6 +56,7 @@
             this.signInBtn = new System.Windows.Forms.Button();
             this.nameLabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.deleteListItem = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listView1
@@ -343,6 +344,20 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // deleteListItem
+            // 
+            this.deleteListItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.deleteListItem.FlatAppearance.BorderSize = 0;
+            this.deleteListItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteListItem.Image = global::taskManager.Properties.Resources.thisisit;
+            this.deleteListItem.Location = new System.Drawing.Point(401, 554);
+            this.deleteListItem.Name = "deleteListItem";
+            this.deleteListItem.Size = new System.Drawing.Size(91, 58);
+            this.deleteListItem.TabIndex = 23;
+            this.deleteListItem.Text = "-";
+            this.deleteListItem.UseVisualStyleBackColor = true;
+            this.deleteListItem.Click += new System.EventHandler(this.deleteListItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -350,6 +365,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1850, 882);
+            this.Controls.Add(this.deleteListItem);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.signInBtn);
@@ -408,6 +424,7 @@
         private System.Windows.Forms.Button signInBtn;
         private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button deleteListItem;
     }
 }
 

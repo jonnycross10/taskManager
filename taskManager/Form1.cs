@@ -166,5 +166,13 @@ namespace taskManager
         {
 
         }
+
+        private void deleteListItem_Click(object sender, EventArgs e)
+        {
+            int index = listBox1.SelectedIndex;
+            listLog.RemoveAt(index);
+            listBox1.Items.RemoveAt(index);
+
+        }
     }
 }
