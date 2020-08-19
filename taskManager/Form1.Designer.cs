@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "",
             ""}, -1);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
@@ -66,7 +66,7 @@
             this.columnHeader1});
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem2});
             this.listView1.Location = new System.Drawing.Point(608, 286);
             this.listView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listView1.Name = "listView1";
@@ -351,7 +351,7 @@
             this.deleteListItem.Image = global::taskManager.Properties.Resources.thisisit;
             this.deleteListItem.Location = new System.Drawing.Point(401, 554);
             this.deleteListItem.Name = "deleteListItem";
-            this.deleteListItem.Size = new System.Drawing.Size(91, 58);
+            this.deleteListItem.Size = new System.Drawing.Size(112, 88);
             this.deleteListItem.TabIndex = 23;
             this.deleteListItem.Text = "-";
             this.deleteListItem.UseVisualStyleBackColor = true;
