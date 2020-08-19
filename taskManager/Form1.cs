@@ -74,11 +74,7 @@ namespace taskManager
                 state.Text = listLog[i].state;
 
 
-                listView1.Visible = true;
-                name.Visible = true;
-                description.Visible = true;
-                assignedTo.Visible = true;
-                state.Visible = true;
+                setLabelVisibility(true);
             }
             catch(System.ArgumentOutOfRangeException)
             {
@@ -93,15 +89,7 @@ namespace taskManager
             if (!shown)
             {
                 showList.Text="-";
-                lName.Visible = true;
-                tName.Visible = true;
-                lDescription.Visible = true;
-                tDescription.Visible = true;
-                lAssigned.Visible = true;
-                tAssigned.Visible = true;
-                lCompleted.Visible = true;
-                tCompleted.Visible = true;
-                submit.Visible = true;
+                setSubmitVisibility(true);
                 shown = true;
             }
             else
