@@ -306,7 +306,6 @@
             // signInBtn
             // 
             this.signInBtn.BackColor = System.Drawing.Color.Transparent;
-            this.signInBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.signInBtn.FlatAppearance.BorderSize = 0;
             this.signInBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.signInBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -330,7 +329,6 @@
             // 
             // button1
             // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -345,8 +343,10 @@
             // 
             // deleteListItem
             // 
-            this.deleteListItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.deleteListItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.deleteListItem.FlatAppearance.BorderSize = 0;
+            this.deleteListItem.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.deleteListItem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.deleteListItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteListItem.Image = global::taskManager.Properties.Resources.thisisit;
             this.deleteListItem.Location = new System.Drawing.Point(401, 554);
@@ -356,6 +356,8 @@
             this.deleteListItem.Text = "-";
             this.deleteListItem.UseVisualStyleBackColor = true;
             this.deleteListItem.Click += new System.EventHandler(this.deleteListItem_Click);
+            this.deleteListItem.MouseLeave += new System.EventHandler(this.deleteListItem_MouseLeave);
+            this.deleteListItem.MouseHover += new System.EventHandler(this.deleteListItem_MouseHover);
             // 
             // Form1
             // 

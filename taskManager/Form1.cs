@@ -181,5 +181,15 @@ namespace taskManager
             listBox1.Items.RemoveAt(index);
             setLabelVisibility(false);
         }
+
+        private void deleteListItem_MouseHover(object sender, EventArgs e)
+        {
+            deleteListItem.ForeColor = Color.White;
+        }
+
+        private void deleteListItem_MouseLeave(object sender, EventArgs e)
+        {
+            deleteListItem.ForeColor = Color.Black;
+        }
     }
 }
