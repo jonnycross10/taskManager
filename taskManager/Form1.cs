@@ -28,12 +28,14 @@ namespace taskManager
         public static List<myList> listLog = new List<myList>();
 
         SignIn s;
+        Register r;
   
         public Form1()
         {   
             InitializeComponent();
             this.Size = new Size(1500, 1400);
             s = new SignIn(this);
+            r = new Register(this);
         }
         
        public void setSubmitVisibility(bool b)
@@ -169,10 +171,7 @@ namespace taskManager
             nameLabel.Text = " Hello, " + t.Text;
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
 
-        }
 
         private void deleteListItem_Click(object sender, EventArgs e)
         {
@@ -190,6 +189,11 @@ namespace taskManager
         private void deleteListItem_MouseLeave(object sender, EventArgs e)
         {
             deleteListItem.ForeColor = Color.Black;
+        }
+
+        private void registerButton_Click(object sender, EventArgs e)
+        {
+            r.Show();
         }
     }
 }

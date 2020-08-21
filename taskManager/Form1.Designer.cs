@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "",
             ""}, -1);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
@@ -49,14 +49,14 @@
             this.lCompleted = new System.Windows.Forms.Label();
             this.submit = new System.Windows.Forms.Button();
             this.TMSName = new System.Windows.Forms.Label();
-            this.showList = new System.Windows.Forms.Button();
             this.suggestionLabel1 = new System.Windows.Forms.Label();
             this.suggestionLabel2 = new System.Windows.Forms.Label();
             this.errorLabel = new System.Windows.Forms.Label();
-            this.signInBtn = new System.Windows.Forms.Button();
             this.nameLabel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.deleteListItem = new System.Windows.Forms.Button();
+            this.registerButton = new System.Windows.Forms.Button();
+            this.signInBtn = new System.Windows.Forms.Button();
+            this.showList = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listView1
@@ -66,7 +66,7 @@
             this.columnHeader1});
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem1});
             this.listView1.Location = new System.Drawing.Point(608, 286);
             this.listView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listView1.Name = "listView1";
@@ -250,25 +250,6 @@
             this.TMSName.Text = "TMS";
             this.TMSName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // showList
-            // 
-            this.showList.FlatAppearance.BorderSize = 0;
-            this.showList.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.showList.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.showList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.showList.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.showList.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.showList.Image = global::taskManager.Properties.Resources.thisisit;
-            this.showList.Location = new System.Drawing.Point(92, 149);
-            this.showList.Name = "showList";
-            this.showList.Size = new System.Drawing.Size(80, 85);
-            this.showList.TabIndex = 6;
-            this.showList.Text = " +";
-            this.showList.UseVisualStyleBackColor = true;
-            this.showList.Click += new System.EventHandler(this.button1_Click);
-            this.showList.MouseLeave += new System.EventHandler(this.showList_MouseLeave);
-            this.showList.MouseHover += new System.EventHandler(this.showList_MouseHover_1);
-            // 
             // suggestionLabel1
             // 
             this.suggestionLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -303,21 +284,6 @@
             this.errorLabel.Text = "dont lose me";
             this.errorLabel.Visible = false;
             // 
-            // signInBtn
-            // 
-            this.signInBtn.BackColor = System.Drawing.Color.Transparent;
-            this.signInBtn.FlatAppearance.BorderSize = 0;
-            this.signInBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.signInBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.signInBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.signInBtn.Image = ((System.Drawing.Image)(resources.GetObject("signInBtn.Image")));
-            this.signInBtn.Location = new System.Drawing.Point(1405, 29);
-            this.signInBtn.Name = "signInBtn";
-            this.signInBtn.Size = new System.Drawing.Size(172, 88);
-            this.signInBtn.TabIndex = 20;
-            this.signInBtn.UseVisualStyleBackColor = false;
-            this.signInBtn.Click += new System.EventHandler(this.signInBtn_Click);
-            // 
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
@@ -326,20 +292,6 @@
             this.nameLabel.Name = "nameLabel";
             this.nameLabel.Size = new System.Drawing.Size(0, 20);
             this.nameLabel.TabIndex = 21;
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(1583, 29);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(177, 88);
-            this.button1.TabIndex = 22;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // deleteListItem
             // 
@@ -359,6 +311,54 @@
             this.deleteListItem.MouseLeave += new System.EventHandler(this.deleteListItem_MouseLeave);
             this.deleteListItem.MouseHover += new System.EventHandler(this.deleteListItem_MouseHover);
             // 
+            // registerButton
+            // 
+            this.registerButton.FlatAppearance.BorderSize = 0;
+            this.registerButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.registerButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.registerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.registerButton.Image = ((System.Drawing.Image)(resources.GetObject("registerButton.Image")));
+            this.registerButton.Location = new System.Drawing.Point(1583, 29);
+            this.registerButton.Name = "registerButton";
+            this.registerButton.Size = new System.Drawing.Size(177, 88);
+            this.registerButton.TabIndex = 22;
+            this.registerButton.UseVisualStyleBackColor = true;
+            this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
+            // 
+            // signInBtn
+            // 
+            this.signInBtn.BackColor = System.Drawing.Color.Transparent;
+            this.signInBtn.FlatAppearance.BorderSize = 0;
+            this.signInBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.signInBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.signInBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.signInBtn.Image = ((System.Drawing.Image)(resources.GetObject("signInBtn.Image")));
+            this.signInBtn.Location = new System.Drawing.Point(1405, 29);
+            this.signInBtn.Name = "signInBtn";
+            this.signInBtn.Size = new System.Drawing.Size(172, 88);
+            this.signInBtn.TabIndex = 20;
+            this.signInBtn.UseVisualStyleBackColor = false;
+            this.signInBtn.Click += new System.EventHandler(this.signInBtn_Click);
+            // 
+            // showList
+            // 
+            this.showList.FlatAppearance.BorderSize = 0;
+            this.showList.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.showList.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.showList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showList.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showList.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.showList.Image = global::taskManager.Properties.Resources.thisisit;
+            this.showList.Location = new System.Drawing.Point(92, 149);
+            this.showList.Name = "showList";
+            this.showList.Size = new System.Drawing.Size(80, 85);
+            this.showList.TabIndex = 6;
+            this.showList.Text = " +";
+            this.showList.UseVisualStyleBackColor = true;
+            this.showList.Click += new System.EventHandler(this.button1_Click);
+            this.showList.MouseLeave += new System.EventHandler(this.showList_MouseLeave);
+            this.showList.MouseHover += new System.EventHandler(this.showList_MouseHover_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -367,7 +367,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1850, 882);
             this.Controls.Add(this.deleteListItem);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.registerButton);
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.signInBtn);
             this.Controls.Add(this.errorLabel);
@@ -424,7 +424,7 @@
         private System.Windows.Forms.Label errorLabel;
         private System.Windows.Forms.Button signInBtn;
         private System.Windows.Forms.Label nameLabel;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button registerButton;
         private System.Windows.Forms.Button deleteListItem;
     }
 }
