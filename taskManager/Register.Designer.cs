@@ -35,6 +35,7 @@
             this.tUsername = new System.Windows.Forms.TextBox();
             this.tEmail = new System.Windows.Forms.TextBox();
             this.tPassword = new System.Windows.Forms.TextBox();
+            this.regSubButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -99,12 +100,23 @@
             this.tPassword.Size = new System.Drawing.Size(181, 26);
             this.tPassword.TabIndex = 6;
             // 
+            // regSubButton
+            // 
+            this.regSubButton.Location = new System.Drawing.Point(502, 414);
+            this.regSubButton.Name = "regSubButton";
+            this.regSubButton.Size = new System.Drawing.Size(75, 29);
+            this.regSubButton.TabIndex = 7;
+            this.regSubButton.Text = "button1";
+            this.regSubButton.UseVisualStyleBackColor = true;
+            this.regSubButton.Click += new System.EventHandler(this.regSubButton_Click);
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(1024, 540);
+            this.Controls.Add(this.regSubButton);
             this.Controls.Add(this.tPassword);
             this.Controls.Add(this.tEmail);
             this.Controls.Add(this.tUsername);
@@ -128,5 +140,6 @@
         private System.Windows.Forms.TextBox tUsername;
         private System.Windows.Forms.TextBox tEmail;
         private System.Windows.Forms.TextBox tPassword;
+        private System.Windows.Forms.Button regSubButton;
     }
 }

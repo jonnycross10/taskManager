@@ -19,5 +19,17 @@ namespace taskManager
             f = f1;
             this.Size = new Size(500, 400);
         }
+        public delegate void delPassData(TextBox text);
+
+        private void regSubButton_Click(object sender, EventArgs e)
+        {
+            if(tUsername.Text!= "" || tEmail.Text != "" || tPassword.Text != "" )
+            {
+                delPassData del = new delPassData(f.signInName);
+                del(this.tUsername);
+                f.Show();
+                this.Close();
+            }
+        }
     }
 }

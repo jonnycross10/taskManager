@@ -169,6 +169,7 @@ namespace taskManager
             }
             catch(System.ObjectDisposedException)
             {
+                errorLabel.Visible = true;
                 errorLabel.Text = "You already signed in";
             }
         }
@@ -206,6 +207,7 @@ namespace taskManager
             }
             catch(System.ObjectDisposedException)
             {
+                errorLabel.Visible = true;
                 errorLabel.Text = "You already clicked this button";
             }
         }
