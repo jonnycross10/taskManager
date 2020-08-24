@@ -163,7 +163,14 @@ namespace taskManager
         
         private void signInBtn_Click(object sender, EventArgs e)
         {
-            s.Show();
+            try
+            {
+                s.Show();
+            }
+            catch(System.ObjectDisposedException)
+            {
+                errorLabel.Text = "You already signed in";
+            }
         }
         
         public void signInName(TextBox t)
@@ -193,7 +200,19 @@ namespace taskManager
 
         private void registerButton_Click(object sender, EventArgs e)
         {
-            r.Show();
+            try
+            { 
+                r.Show(); 
+            }
+            catch(System.ObjectDisposedException)
+            {
+                errorLabel.Text = "You already clicked this button";
+            }
+        }
+
+        private void errorLabel_Click(object sender, EventArgs e)
+        {
+            errorLabel.Text = "";
         }
     }
 }

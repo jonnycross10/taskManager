@@ -283,6 +283,7 @@
             this.errorLabel.TabIndex = 19;
             this.errorLabel.Text = "dont lose me";
             this.errorLabel.Visible = false;
+            this.errorLabel.Click += new System.EventHandler(this.errorLabel_Click);
             // 
             // nameLabel
             // 
