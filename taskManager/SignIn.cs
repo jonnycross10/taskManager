@@ -17,7 +17,7 @@ namespace taskManager
         {
             InitializeComponent();
             f = f1;
-            this.Size = new Size(500,400);
+            this.Size = new Size(700,400);
         }
         
 
