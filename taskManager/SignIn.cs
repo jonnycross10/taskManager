@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace taskManager
 {
@@ -19,7 +20,15 @@ namespace taskManager
             f = f1;
             this.Size = new Size(700,400);
         }
-        
+        static string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=test;";
+        static string query = "SELECT * FROM user";
+
+        /*
+        static MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+        MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
+        commandDatabase.CommandTimeout = 60;
+        MySqlDataReader reader;
+        */
 
         public delegate void delPassData(TextBox text);
 

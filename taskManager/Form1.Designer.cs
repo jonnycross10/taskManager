@@ -338,7 +338,7 @@
             this.signInBtn.Name = "signInBtn";
             this.signInBtn.Size = new System.Drawing.Size(172, 88);
             this.signInBtn.TabIndex = 20;
-            this.signInBtn.UseVisualStyleBackColor = false;
+            this.signInBtn.UseVisualStyleBackColor = true;
             this.signInBtn.Click += new System.EventHandler(this.signInBtn_Click);
             // 
             // showList
