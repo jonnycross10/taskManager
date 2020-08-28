@@ -30,6 +30,16 @@ namespace taskManager
         MySqlDataReader reader;
         */
 
+        /*
+        Animate the sign in button to load gif
+
+        Enable the Image animation:
+        sfButton1.AllowImageAnimation = true;
+
+        Initialize the animation image to SfButton:
+        sfButton1.Style.Image = Image.FromFile(@"..\..\Data\animationImage.gif");
+        */
+
         public delegate void delPassData(TextBox text);
 
         private void signInButton_Click(object sender, EventArgs e)

@@ -14,6 +14,8 @@ namespace taskManager
 {
     public partial class Form1 : Form
     {
+        //setting the buttons to have no border showing
+        
         
         public class myList
         {
@@ -36,6 +38,7 @@ namespace taskManager
             this.Size = new Size(1500, 1400);
             s = new SignIn(this);
             r = new Register(this);
+            this.showList.FlatAppearance.BorderSize = 0;
         }
         
        public void setSubmitVisibility(bool b)
