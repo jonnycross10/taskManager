@@ -20,9 +20,19 @@ namespace taskManager
             f = f1;
             this.Size = new Size(700,400);
         }
-        static string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=test;";
-        static string query = "SELECT * FROM user";
-
+        private void dbConnection()
+        {
+            string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=tms;";
+            MySqlConnection dbConnect = new MySqlConnection(connectionString);
+            try
+            {
+                dbConnect.Open();
+            }
+            catch(Exception e)
+            {
+                errLabel.Text = e.Message;
+            }
+        }
         /*
         static MySqlConnection databaseConnection = new MySqlConnection(connectionString);
         MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);

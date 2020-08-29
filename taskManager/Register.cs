@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace taskManager
 {
@@ -19,6 +20,21 @@ namespace taskManager
             f = f1;
             this.Size = new Size(700, 400);
         }
+
+        private void dbConnection()
+        {
+            string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=tms;";
+            MySqlConnection dbConnect = new MySqlConnection(connectionString);
+            try
+            {
+                dbConnect.Open();
+            }
+            catch (Exception e)
+            {
+                errLabel.Text = e.Message;
+            }
+        }
+
         public delegate void delPassData(TextBox text);
 
         private void regSubButton_Click(object sender, EventArgs e)
@@ -30,6 +46,7 @@ namespace taskManager
                 f.Show();
                 this.Close();
             }
+            dbConnection();
         }
     }
 }

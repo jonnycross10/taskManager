@@ -35,6 +35,7 @@
             this.passBox = new System.Windows.Forms.TextBox();
             this.signInButton = new System.Windows.Forms.Button();
             this.errorLabel = new System.Windows.Forms.Label();
+            this.errLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // nameBox
@@ -103,12 +104,21 @@
             this.errorLabel.Size = new System.Drawing.Size(0, 20);
             this.errorLabel.TabIndex = 6;
             // 
+            // errLabel
+            // 
+            this.errLabel.AutoSize = true;
+            this.errLabel.Location = new System.Drawing.Point(123, 119);
+            this.errLabel.Name = "errLabel";
+            this.errLabel.Size = new System.Drawing.Size(0, 20);
+            this.errLabel.TabIndex = 7;
+            // 
             // SignIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(1024, 540);
+            this.Controls.Add(this.errLabel);
             this.Controls.Add(this.errorLabel);
             this.Controls.Add(this.signInButton);
             this.Controls.Add(this.passBox);
@@ -132,5 +142,6 @@
         private System.Windows.Forms.TextBox passBox;
         private System.Windows.Forms.Button signInButton;
         private System.Windows.Forms.Label errorLabel;
+        private System.Windows.Forms.Label errLabel;
     }
 }

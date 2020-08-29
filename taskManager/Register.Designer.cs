@@ -36,6 +36,7 @@
             this.tEmail = new System.Windows.Forms.TextBox();
             this.tPassword = new System.Windows.Forms.TextBox();
             this.regSubButton = new System.Windows.Forms.Button();
+            this.errLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -110,12 +111,21 @@
             this.regSubButton.UseVisualStyleBackColor = true;
             this.regSubButton.Click += new System.EventHandler(this.regSubButton_Click);
             // 
+            // errLabel
+            // 
+            this.errLabel.AutoSize = true;
+            this.errLabel.Location = new System.Drawing.Point(122, 79);
+            this.errLabel.Name = "errLabel";
+            this.errLabel.Size = new System.Drawing.Size(0, 20);
+            this.errLabel.TabIndex = 8;
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(1024, 540);
+            this.Controls.Add(this.errLabel);
             this.Controls.Add(this.regSubButton);
             this.Controls.Add(this.tPassword);
             this.Controls.Add(this.tEmail);
@@ -141,5 +151,6 @@
         private System.Windows.Forms.TextBox tEmail;
         private System.Windows.Forms.TextBox tPassword;
         private System.Windows.Forms.Button regSubButton;
+        private System.Windows.Forms.Label errLabel;
     }
 }
