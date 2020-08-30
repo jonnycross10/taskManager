@@ -94,21 +94,21 @@
             this.tEmail.Location = new System.Drawing.Point(397, 258);
             this.tEmail.Name = "tEmail";
             this.tEmail.Size = new System.Drawing.Size(181, 26);
-            this.tEmail.TabIndex = 5;
+            this.tEmail.TabIndex = 6;
             // 
             // tPassword
             // 
             this.tPassword.Location = new System.Drawing.Point(397, 334);
             this.tPassword.Name = "tPassword";
             this.tPassword.Size = new System.Drawing.Size(181, 26);
-            this.tPassword.TabIndex = 6;
+            this.tPassword.TabIndex = 7;
             // 
             // regSubButton
             // 
             this.regSubButton.Location = new System.Drawing.Point(502, 414);
             this.regSubButton.Name = "regSubButton";
             this.regSubButton.Size = new System.Drawing.Size(75, 29);
-            this.regSubButton.TabIndex = 7;
+            this.regSubButton.TabIndex = 8;
             this.regSubButton.Text = "button1";
             this.regSubButton.UseVisualStyleBackColor = true;
             this.regSubButton.Click += new System.EventHandler(this.regSubButton_Click);
@@ -119,14 +119,14 @@
             this.errLabel.Location = new System.Drawing.Point(122, 79);
             this.errLabel.Name = "errLabel";
             this.errLabel.Size = new System.Drawing.Size(0, 20);
-            this.errLabel.TabIndex = 8;
+            this.errLabel.TabIndex = 9;
             // 
             // tLastName
             // 
             this.tLastName.Location = new System.Drawing.Point(400, 206);
             this.tLastName.Name = "tLastName";
             this.tLastName.Size = new System.Drawing.Size(181, 26);
-            this.tLastName.TabIndex = 10;
+            this.tLastName.TabIndex = 5;
             // 
             // lLastName
             // 
