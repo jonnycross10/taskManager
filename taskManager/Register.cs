@@ -44,6 +44,31 @@ namespace taskManager
             {
                 delPassData del = new delPassData(f.signInName);
                 del(this.tFirstName);
+
+
+
+                
+                try
+                {
+                    string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=tms;";
+                    string addUser = "INSERT into userTable(userFirstName,userLastName, userEmail, userPassword,userStatus) values ('" + this.tFirstName.Text + "','" + this.tLastName.Text + "', '" + this.tEmail + "', '" + this.tPassword + "','a')";
+                    MySqlConnection dbConnect = new MySqlConnection(connectionString);
+                    MySqlCommand myCommand = new MySqlCommand(addUser, dbConnect);
+                    dbConnect.Open();
+                    MySqlDataReader myReader = myCommand.ExecuteReader();
+                    while(myReader.Read())
+                    {
+
+                    }
+                    dbConnect.Close();
+                }
+                catch (Exception ex)
+                {
+                    errLabel.Text = ex.Message;
+                }
+
+
+
                 f.Show();
                 this.Close();
             }
