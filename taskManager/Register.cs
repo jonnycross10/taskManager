@@ -24,6 +24,7 @@ namespace taskManager
         private void dbConnection()
         {
             string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=tms;";
+            //string addUser = "INSERT into userTable(userFirstName,userLastName, userEmail, userPassword,userStatus) values ()"
             MySqlConnection dbConnect = new MySqlConnection(connectionString);
             try
             {
@@ -39,10 +40,10 @@ namespace taskManager
 
         private void regSubButton_Click(object sender, EventArgs e)
         {
-            if(tUsername.Text!= "" || tEmail.Text != "" || tPassword.Text != "" )
+            if(tFirstName.Text!= "" || tEmail.Text != "" || tPassword.Text != "" )
             {
                 delPassData del = new delPassData(f.signInName);
-                del(this.tUsername);
+                del(this.tFirstName);
                 f.Show();
                 this.Close();
             }

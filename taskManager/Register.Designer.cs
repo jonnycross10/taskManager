@@ -29,14 +29,16 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.lUsername = new System.Windows.Forms.Label();
+            this.lFirstName = new System.Windows.Forms.Label();
             this.lEmail = new System.Windows.Forms.Label();
             this.lPassword = new System.Windows.Forms.Label();
-            this.tUsername = new System.Windows.Forms.TextBox();
+            this.tFirstName = new System.Windows.Forms.TextBox();
             this.tEmail = new System.Windows.Forms.TextBox();
             this.tPassword = new System.Windows.Forms.TextBox();
             this.regSubButton = new System.Windows.Forms.Button();
             this.errLabel = new System.Windows.Forms.Label();
+            this.tLastName = new System.Windows.Forms.TextBox();
+            this.lLastName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -50,15 +52,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Register";
             // 
-            // lUsername
+            // lFirstName
             // 
-            this.lUsername.AutoSize = true;
-            this.lUsername.ForeColor = System.Drawing.Color.White;
-            this.lUsername.Location = new System.Drawing.Point(265, 183);
-            this.lUsername.Name = "lUsername";
-            this.lUsername.Size = new System.Drawing.Size(89, 20);
-            this.lUsername.TabIndex = 1;
-            this.lUsername.Text = "User Name";
+            this.lFirstName.AutoSize = true;
+            this.lFirstName.ForeColor = System.Drawing.Color.White;
+            this.lFirstName.Location = new System.Drawing.Point(265, 148);
+            this.lFirstName.Name = "lFirstName";
+            this.lFirstName.Size = new System.Drawing.Size(86, 20);
+            this.lFirstName.TabIndex = 1;
+            this.lFirstName.Text = "First Name";
             // 
             // lEmail
             // 
@@ -80,12 +82,12 @@
             this.lPassword.TabIndex = 3;
             this.lPassword.Text = "Password";
             // 
-            // tUsername
+            // tFirstName
             // 
-            this.tUsername.Location = new System.Drawing.Point(397, 183);
-            this.tUsername.Name = "tUsername";
-            this.tUsername.Size = new System.Drawing.Size(181, 26);
-            this.tUsername.TabIndex = 4;
+            this.tFirstName.Location = new System.Drawing.Point(411, 148);
+            this.tFirstName.Name = "tFirstName";
+            this.tFirstName.Size = new System.Drawing.Size(181, 26);
+            this.tFirstName.TabIndex = 4;
             // 
             // tEmail
             // 
@@ -119,20 +121,39 @@
             this.errLabel.Size = new System.Drawing.Size(0, 20);
             this.errLabel.TabIndex = 8;
             // 
+            // tLastName
+            // 
+            this.tLastName.Location = new System.Drawing.Point(400, 206);
+            this.tLastName.Name = "tLastName";
+            this.tLastName.Size = new System.Drawing.Size(181, 26);
+            this.tLastName.TabIndex = 10;
+            // 
+            // lLastName
+            // 
+            this.lLastName.AutoSize = true;
+            this.lLastName.ForeColor = System.Drawing.Color.White;
+            this.lLastName.Location = new System.Drawing.Point(254, 206);
+            this.lLastName.Name = "lLastName";
+            this.lLastName.Size = new System.Drawing.Size(86, 20);
+            this.lLastName.TabIndex = 9;
+            this.lLastName.Text = "Last Name";
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(1024, 540);
+            this.Controls.Add(this.tLastName);
+            this.Controls.Add(this.lLastName);
             this.Controls.Add(this.errLabel);
             this.Controls.Add(this.regSubButton);
             this.Controls.Add(this.tPassword);
             this.Controls.Add(this.tEmail);
-            this.Controls.Add(this.tUsername);
+            this.Controls.Add(this.tFirstName);
             this.Controls.Add(this.lPassword);
             this.Controls.Add(this.lEmail);
-            this.Controls.Add(this.lUsername);
+            this.Controls.Add(this.lFirstName);
             this.Controls.Add(this.label1);
             this.Name = "Register";
             this.Text = "Register";
@@ -144,13 +165,15 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lUsername;
+        private System.Windows.Forms.Label lFirstName;
         private System.Windows.Forms.Label lEmail;
         private System.Windows.Forms.Label lPassword;
-        private System.Windows.Forms.TextBox tUsername;
+        private System.Windows.Forms.TextBox tFirstName;
         private System.Windows.Forms.TextBox tEmail;
         private System.Windows.Forms.TextBox tPassword;
         private System.Windows.Forms.Button regSubButton;
         private System.Windows.Forms.Label errLabel;
+        private System.Windows.Forms.TextBox tLastName;
+        private System.Windows.Forms.Label lLastName;
     }
 }
