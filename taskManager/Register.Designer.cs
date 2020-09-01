@@ -39,6 +39,7 @@
             this.errLabel = new System.Windows.Forms.Label();
             this.tLastName = new System.Windows.Forms.TextBox();
             this.lLastName = new System.Windows.Forms.Label();
+            this.displayLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -138,12 +139,21 @@
             this.lLastName.TabIndex = 9;
             this.lLastName.Text = "Last Name";
             // 
+            // displayLabel
+            // 
+            this.displayLabel.AutoSize = true;
+            this.displayLabel.Location = new System.Drawing.Point(785, 119);
+            this.displayLabel.Name = "displayLabel";
+            this.displayLabel.Size = new System.Drawing.Size(0, 20);
+            this.displayLabel.TabIndex = 10;
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(1024, 540);
+            this.Controls.Add(this.displayLabel);
             this.Controls.Add(this.tLastName);
             this.Controls.Add(this.lLastName);
             this.Controls.Add(this.errLabel);
@@ -175,5 +185,6 @@
         private System.Windows.Forms.Label errLabel;
         private System.Windows.Forms.TextBox tLastName;
         private System.Windows.Forms.Label lLastName;
+        private System.Windows.Forms.Label displayLabel;
     }
 }

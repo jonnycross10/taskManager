@@ -50,8 +50,8 @@ namespace taskManager
                 {
                     string output = "";
                     string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=tms;";
-                    string existingAccount = "select * from userTable;"; 
-                    //string existingAccount = "select * from userTable where " + this.tEmail + " = userEmail;";
+                    //string existingAccount = "select * from userTable;"; 
+                    string existingAccount = "select * from userTable where '" + this.tEmail.Text + "'  = userEmail;";
                     MySqlConnection conn = new MySqlConnection(connectionString);
                     conn.Open();
                     MySqlCommand com = new MySqlCommand(existingAccount, conn);
@@ -64,6 +64,7 @@ namespace taskManager
                         }
                     }
                     errLabel.Text = "An account already exists, try another email!";
+                    displayLabel.Text = output; // show what the query returned 
 
 
 
