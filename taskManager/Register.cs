@@ -44,33 +44,69 @@ namespace taskManager
             {
                 delPassData del = new delPassData(f.signInName);
                 del(this.tFirstName);
-
-
-
+                //see if user exists
                 
                 try
                 {
+                    string output = "";
                     string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=tms;";
-                    string addUser = "INSERT into userTable(userFirstName,userLastName, userEmail, userPassword,userStatus) values ('" + this.tFirstName.Text + "','" + this.tLastName.Text + "', '" + this.tEmail + "', '" + this.tPassword + "','a')";
-                    MySqlConnection dbConnect = new MySqlConnection(connectionString);
-                    MySqlCommand myCommand = new MySqlCommand(addUser, dbConnect);
-                    dbConnect.Open();
-                    MySqlDataReader myReader = myCommand.ExecuteReader();
-                    while(myReader.Read())
+                    string existingAccount = "select * from userTable;"; 
+                    //string existingAccount = "select * from userTable where " + this.tEmail + " = userEmail;";
+                    MySqlConnection conn = new MySqlConnection(connectionString);
+                    conn.Open();
+                    MySqlCommand com = new MySqlCommand(existingAccount, conn);
+                    MySqlDataReader dr = com.ExecuteReader();
+                    while(dr.Read())
                     {
-
+                        if (dr.GetValue(0).ToString() != "") // did we get empty data from the database? if we didnt then give a value to output
+                        {
+                            output = output + dr.GetValue(0).ToString() + dr.GetValue(1);
+                        }
                     }
-                    dbConnect.Close();
+                    errLabel.Text = "An account already exists, try another email!";
+
+
+
+                    //if the statement didn't return any values then you are free to make the account
+                    if (output == "")
+                    {
+                        try
+                        {
+                            string connectionString2 = "datasource=127.0.0.1;port=3306;username=root;password=;database=tms;";
+                            string addUser = "INSERT into userTable(userFirstName,userLastName, userEmail, userPassword,userStatus) values ('" + this.tFirstName.Text + "','" + this.tLastName.Text + "', '" + this.tEmail + "', '" + this.tPassword + "','a')";
+                            MySqlConnection dbConnect = new MySqlConnection(connectionString2);
+                            MySqlCommand myCommand = new MySqlCommand(addUser, dbConnect);
+                            dbConnect.Open();
+                            MySqlDataReader myReader = myCommand.ExecuteReader();
+                            while (myReader.Read())
+                            {
+
+                            }
+                            dbConnect.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            errLabel.Text = ex.Message;
+                        }
+                    }
+
+
+
+
+
                 }
                 catch (Exception ex)
                 {
                     errLabel.Text = ex.Message;
                 }
 
+                
+              
+
 
 
                 f.Show();
-                this.Close();
+                //this.Close();
             }
             dbConnection();
         }

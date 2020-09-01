@@ -116,7 +116,7 @@
             // errLabel
             // 
             this.errLabel.AutoSize = true;
-            this.errLabel.Location = new System.Drawing.Point(122, 79);
+            this.errLabel.Location = new System.Drawing.Point(28, 27);
             this.errLabel.Name = "errLabel";
             this.errLabel.Size = new System.Drawing.Size(0, 20);
             this.errLabel.TabIndex = 9;

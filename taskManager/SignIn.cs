@@ -73,5 +73,10 @@ namespace taskManager
         {
             passBox.PasswordChar = '\u2022';
         }
+
+        private void SignIn_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
