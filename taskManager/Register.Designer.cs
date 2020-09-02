@@ -57,7 +57,7 @@
             // 
             this.lFirstName.AutoSize = true;
             this.lFirstName.ForeColor = System.Drawing.Color.White;
-            this.lFirstName.Location = new System.Drawing.Point(265, 148);
+            this.lFirstName.Location = new System.Drawing.Point(265, 151);
             this.lFirstName.Name = "lFirstName";
             this.lFirstName.Size = new System.Drawing.Size(86, 20);
             this.lFirstName.TabIndex = 1;
@@ -67,7 +67,7 @@
             // 
             this.lEmail.AutoSize = true;
             this.lEmail.ForeColor = System.Drawing.Color.White;
-            this.lEmail.Location = new System.Drawing.Point(265, 258);
+            this.lEmail.Location = new System.Drawing.Point(265, 272);
             this.lEmail.Name = "lEmail";
             this.lEmail.Size = new System.Drawing.Size(48, 20);
             this.lEmail.TabIndex = 2;
@@ -85,21 +85,21 @@
             // 
             // tFirstName
             // 
-            this.tFirstName.Location = new System.Drawing.Point(411, 148);
+            this.tFirstName.Location = new System.Drawing.Point(396, 148);
             this.tFirstName.Name = "tFirstName";
             this.tFirstName.Size = new System.Drawing.Size(181, 26);
             this.tFirstName.TabIndex = 4;
             // 
             // tEmail
             // 
-            this.tEmail.Location = new System.Drawing.Point(397, 258);
+            this.tEmail.Location = new System.Drawing.Point(396, 272);
             this.tEmail.Name = "tEmail";
             this.tEmail.Size = new System.Drawing.Size(181, 26);
             this.tEmail.TabIndex = 6;
             // 
             // tPassword
             // 
-            this.tPassword.Location = new System.Drawing.Point(397, 334);
+            this.tPassword.Location = new System.Drawing.Point(396, 335);
             this.tPassword.Name = "tPassword";
             this.tPassword.Size = new System.Drawing.Size(181, 26);
             this.tPassword.TabIndex = 7;
@@ -124,7 +124,7 @@
             // 
             // tLastName
             // 
-            this.tLastName.Location = new System.Drawing.Point(400, 206);
+            this.tLastName.Location = new System.Drawing.Point(396, 206);
             this.tLastName.Name = "tLastName";
             this.tLastName.Size = new System.Drawing.Size(181, 26);
             this.tLastName.TabIndex = 5;
@@ -133,7 +133,7 @@
             // 
             this.lLastName.AutoSize = true;
             this.lLastName.ForeColor = System.Drawing.Color.White;
-            this.lLastName.Location = new System.Drawing.Point(254, 206);
+            this.lLastName.Location = new System.Drawing.Point(265, 212);
             this.lLastName.Name = "lLastName";
             this.lLastName.Size = new System.Drawing.Size(86, 20);
             this.lLastName.TabIndex = 9;
