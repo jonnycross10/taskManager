@@ -51,17 +51,18 @@ namespace taskManager
                     int output = 0;
                     string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=tms;";
                     //string existingAccount = "select * from userTable;"; 
-                    string existingAccount = "select userID from userTable where userEmail = '" + this.tEmail.Text + "';";
+                    string existingAccount = "select * from userTable where userEmail = '" + this.tEmail.Text + "';";
                     MySqlConnection conn = new MySqlConnection(connectionString);
                     conn.Open();
                     MySqlCommand com = new MySqlCommand(existingAccount, conn);
                     MySqlDataReader dr = com.ExecuteReader();
                     while(dr.Read())
                     {
-                        displayLabel.Text = displayLabel.Text + dr.GetValue(1).ToString();
+                        displayLabel.Text = dr.GetValue(0).ToString();
                         if (dr.GetInt32(0) != 0) // did we get empty data from the database? if we didnt then give a value to output
                         {
                             output = dr.GetInt32(0);
+                            errLabel.Text = "There is already an account signed up with that email.";
                         }
                     }
                     
@@ -72,7 +73,6 @@ namespace taskManager
                     //if the statement didn't return any values then you are free to make the account
                     if (output == 0)
                     {
-                        errLabel.Text = "An account already exists, try another email!";
                         try
                         {
                             string connectionString2 = "datasource=127.0.0.1;port=3306;username=root;password=;database=tms;";
