@@ -142,6 +142,7 @@
             // displayLabel
             // 
             this.displayLabel.AutoSize = true;
+            this.displayLabel.ForeColor = System.Drawing.Color.White;
             this.displayLabel.Location = new System.Drawing.Point(785, 119);
             this.displayLabel.Name = "displayLabel";
             this.displayLabel.Size = new System.Drawing.Size(0, 20);

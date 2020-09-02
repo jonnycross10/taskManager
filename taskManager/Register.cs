@@ -48,33 +48,35 @@ namespace taskManager
                 
                 try
                 {
-                    string output = "";
+                    int output = 0;
                     string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=tms;";
                     //string existingAccount = "select * from userTable;"; 
-                    string existingAccount = "select * from userTable where '" + this.tEmail.Text + "'  = userEmail;";
+                    string existingAccount = "select userID from userTable where userEmail = '" + this.tEmail.Text + "';";
                     MySqlConnection conn = new MySqlConnection(connectionString);
                     conn.Open();
                     MySqlCommand com = new MySqlCommand(existingAccount, conn);
                     MySqlDataReader dr = com.ExecuteReader();
                     while(dr.Read())
                     {
-                        if (dr.GetValue(0).ToString() != "") // did we get empty data from the database? if we didnt then give a value to output
+                        displayLabel.Text = displayLabel.Text + dr.GetValue(1).ToString();
+                        if (dr.GetInt32(0) != 0) // did we get empty data from the database? if we didnt then give a value to output
                         {
-                            output = output + dr.GetValue(0).ToString() + dr.GetValue(1);
+                            output = dr.GetInt32(0);
                         }
                     }
-                    errLabel.Text = "An account already exists, try another email!";
-                    displayLabel.Text = output; // show what the query returned 
+                    
+                    //displayLabel.Text = output.ToString(); // show what the query returned 
 
 
 
                     //if the statement didn't return any values then you are free to make the account
-                    if (output == "")
+                    if (output == 0)
                     {
+                        errLabel.Text = "An account already exists, try another email!";
                         try
                         {
                             string connectionString2 = "datasource=127.0.0.1;port=3306;username=root;password=;database=tms;";
-                            string addUser = "INSERT into userTable(userFirstName,userLastName, userEmail, userPassword,userStatus) values ('" + this.tFirstName.Text + "','" + this.tLastName.Text + "', '" + this.tEmail + "', '" + this.tPassword + "','a')";
+                            string addUser = "INSERT into userTable(userFirstName,userLastName, userEmail, userPassword,userStatus) values ('" + this.tFirstName.Text + "','" + this.tLastName.Text + "', '" + this.tEmail.Text + "', '" + this.tPassword.Text + "','a')";
                             MySqlConnection dbConnect = new MySqlConnection(connectionString2);
                             MySqlCommand myCommand = new MySqlCommand(addUser, dbConnect);
                             dbConnect.Open();
