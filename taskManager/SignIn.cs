@@ -33,22 +33,6 @@ namespace taskManager
                 errLabel.Text = e.Message;
             }
         }
-        /*
-        static MySqlConnection databaseConnection = new MySqlConnection(connectionString);
-        MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
-        commandDatabase.CommandTimeout = 60;
-        MySqlDataReader reader;
-        */
-
-        /*
-        Animate the sign in button to load gif
-
-        Enable the Image animation:
-        sfButton1.AllowImageAnimation = true;
-
-        Initialize the animation image to SfButton:
-        sfButton1.Style.Image = Image.FromFile(@"..\..\Data\animationImage.gif");
-        */
 
         public delegate void delPassData(TextBox text);
 
@@ -56,17 +40,41 @@ namespace taskManager
         {
             
             
-            if (nameBox.Text != "" && passBox.Text != "")
+            if (tEmail.Text != "" && passBox.Text != "")
             {
                 delPassData del = new delPassData(f.signInName);
-                del(this.nameBox);
+                del(this.tEmail);
+
+                try
+                {
+                    int output =0; // will contain user id number if one is found
+                    string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=tms;";
+                    string query = "select * from userTable where userEmail = '" + this.tEmail.Text +"';";
+                    MySqlConnection conn = new MySqlConnection(connectionString);
+                    MySqlCommand com = new MySqlCommand(query, conn);
+                    conn.Open();
+                    MySqlDataReader dr = com.ExecuteReader();
+                    while(dr.Read())
+                    {
+                        output = dr.GetInt32(0);
+                    }
+
+                }
+                catch(Exception ex)
+                {
+
+                }
+
                 f.Show();
                 this.Close();
             }
             else
             {
                 errorLabel.Text = "user name and password must not be blank";
+                
             }
+
+            
         }
 
         private void passBox_KeyPress(object sender, KeyPressEventArgs e)

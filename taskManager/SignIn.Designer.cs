@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.nameBox = new System.Windows.Forms.TextBox();
+            this.tEmail = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lEmail = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.passBox = new System.Windows.Forms.TextBox();
             this.signInButton = new System.Windows.Forms.Button();
@@ -38,12 +38,12 @@
             this.errLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // nameBox
+            // tEmail
             // 
-            this.nameBox.Location = new System.Drawing.Point(460, 205);
-            this.nameBox.Name = "nameBox";
-            this.nameBox.Size = new System.Drawing.Size(162, 26);
-            this.nameBox.TabIndex = 0;
+            this.tEmail.Location = new System.Drawing.Point(460, 205);
+            this.tEmail.Name = "tEmail";
+            this.tEmail.Size = new System.Drawing.Size(162, 26);
+            this.tEmail.TabIndex = 0;
             // 
             // label1
             // 
@@ -57,15 +57,15 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Sign In to TMS";
             // 
-            // label2
+            // lEmail
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(366, 211);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "User Name";
+            this.lEmail.AutoSize = true;
+            this.lEmail.ForeColor = System.Drawing.Color.White;
+            this.lEmail.Location = new System.Drawing.Point(333, 208);
+            this.lEmail.Name = "lEmail";
+            this.lEmail.Size = new System.Drawing.Size(111, 20);
+            this.lEmail.TabIndex = 2;
+            this.lEmail.Text = "Email Address";
             // 
             // label3
             // 
@@ -123,9 +123,9 @@
             this.Controls.Add(this.signInButton);
             this.Controls.Add(this.passBox);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lEmail);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.nameBox);
+            this.Controls.Add(this.tEmail);
             this.Name = "SignIn";
             this.Text = "SignIn";
             this.Load += new System.EventHandler(this.SignIn_Load);
@@ -136,9 +136,9 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox nameBox;
+        private System.Windows.Forms.TextBox tEmail;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lEmail;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox passBox;
         private System.Windows.Forms.Button signInButton;
