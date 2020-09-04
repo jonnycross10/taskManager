@@ -47,7 +47,8 @@ namespace taskManager
 
                 try
                 {
-                    int output =0; // will contain user id number if one is found
+                    int id =0; // will contain user id number if one is found
+                    string fn = "";
                     string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=tms;";
                     string query = "select * from userTable where userEmail = '" + this.tEmail.Text +"';";
                     MySqlConnection conn = new MySqlConnection(connectionString);
@@ -56,8 +57,10 @@ namespace taskManager
                     MySqlDataReader dr = com.ExecuteReader();
                     while(dr.Read())
                     {
-                        output = dr.GetInt32(0);
+                        id = dr.GetInt32(0);
+                        fn = dr.GetString(1);
                     }
+                    errLabel.Text = dr.GetInt32(0).ToString() + fn;
 
                 }
                 catch(Exception ex)
@@ -66,7 +69,8 @@ namespace taskManager
                 }
 
                 f.Show();
-                this.Close();
+                //if it works
+                //this.Close();
             }
             else
             {
