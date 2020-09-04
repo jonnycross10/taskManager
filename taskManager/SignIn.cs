@@ -62,7 +62,7 @@ namespace taskManager
                 }
                 catch(Exception ex)
                 {
-
+                    errLabel.Text = ex.Message;
                 }
 
                 f.Show();
