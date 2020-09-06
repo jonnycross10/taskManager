@@ -44,11 +44,12 @@ namespace taskManager
             {
                 delPassData del = new delPassData(f.signInName);
                 del(this.tEmail);
+                int id = 0; // will contain user id number if one is found
+                string fn = "";
 
                 try
                 {
-                    int id =0; // will contain user id number if one is found
-                    string fn = "";
+                    
                     string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=tms;";
                     string query = "select * from userTable where userEmail = '" + this.tEmail.Text +"';";
                     MySqlConnection conn = new MySqlConnection(connectionString);
@@ -67,7 +68,8 @@ namespace taskManager
                 {
                     errLabel.Text = ex.Message;
                 }
-
+                //pass user id to form 1 method so i can call the database with it in form1
+                //delPassData d = new delPassData(form1 method name);
                 f.Show();
                 //if it works
                 //this.Close();
