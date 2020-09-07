@@ -34,16 +34,16 @@ namespace taskManager
             }
         }
 
-        public delegate void delPassData(TextBox text);
+        //public delegate void delPassData(TextBox text);
 
-        private void signInButton_Click(object sender, EventArgs e)
+        public void signInButton_Click(object sender, EventArgs e)
         {
             
             
             if (tEmail.Text != "" && passBox.Text != "")
             {
-                delPassData del = new delPassData(f.signInName);
-                del(this.tEmail);
+                //delPassData del = new delPassData(f.signInName);
+                //del(this.tEmail);
                 int id = 0; // will contain user id number if one is found
                 string fn = "";
 
@@ -69,8 +69,9 @@ namespace taskManager
                     errLabel.Text = ex.Message;
                 }
                 //pass user id to form 1 method so i can call the database with it in form1
-                //delPassData d = new delPassData(form1 method name);
+                
                 f.Show();
+                f.getList(id);
                 //if it works
                 //this.Close();
             }

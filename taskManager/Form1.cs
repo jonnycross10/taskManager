@@ -177,10 +177,8 @@ namespace taskManager
             }
         }
         
-        public void signInName(TextBox t)
-        {
-            nameLabel.Text = " Hello, " + t.Text;
-        }
+        //public void signInName(TextBox t)
+        //{nameLabel.Text = " Hello, " + t.Text;}
 
 
 
@@ -218,6 +216,18 @@ namespace taskManager
         private void errorLabel_Click(object sender, EventArgs e)
         {
             errorLabel.Text = "";
+        }
+
+        //this method will get the items from the database and return them as a list of items
+        public  void getList(int id)
+        {
+            //will need to query for all of the items with a matching user id, obtained from sign in and register pages
+            myList[] m = new myList[1]; // set length to the count from the database
+            nameLabel.Text = "hello user " + id.ToString();
+
+
+            //probably make a for loop to insert the items at beginning of list, in case someone added an item and then signed in
+            //listBox1.Items.Insert(0, username);
         }
     }
 }

@@ -36,14 +36,14 @@ namespace taskManager
             }
         }
 
-        public delegate void delPassData(TextBox text);
+        //public delegate void delPassData(TextBox text);
 
         private void regSubButton_Click(object sender, EventArgs e)
         {
             if(tFirstName.Text!= "" || tEmail.Text != "" || tPassword.Text != "" )
             {
-                delPassData del = new delPassData(f.signInName);
-                del(this.tFirstName);
+                //delPassData del = new delPassData(f.signInName);
+                //del(this.tFirstName);
                 //see if user exists
                 
                 try
