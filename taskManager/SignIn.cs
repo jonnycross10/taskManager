@@ -71,7 +71,8 @@ namespace taskManager
                 //pass user id to form 1 method so i can call the database with it in form1
                 
                 f.Show();
-                f.getList(id);
+                f.userID = id.ToString();
+                //f.getList(id);
                 //if it works
                 //this.Close();
             }

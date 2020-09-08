@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace taskManager
 {
@@ -31,6 +32,7 @@ namespace taskManager
 
         SignIn s;
         Register r;
+        public string userID = "";
   
         public Form1()
         {   
@@ -134,6 +136,16 @@ namespace taskManager
             tDescription.Text = "";
             tAssigned.Text = "";
             tCompleted.Text = "";
+
+            try
+            {
+                string queryString = "insert into itemTable(itemName, itemDetail, itemAssignedUserID, itemCreateUserID, itemCreateDT, itemUpdateUserID, itemState) " +
+                "values( '"+ item1.listName + "', '"+ item1.listDescription + "', 0, '"+userID+"', '" +DateTime.Now +"', 0, O ";
+            }
+            catch(Exception ex)
+            {
+                errorLabel.Text = ex.Message;
+            }
         }
 
 
@@ -219,11 +231,20 @@ namespace taskManager
         }
 
         //this method will get the items from the database and return them as a list of items
-        public  void getList(int id)
+        public  void getList()
         {
             //will need to query for all of the items with a matching user id, obtained from sign in and register pages
             myList[] m = new myList[1]; // set length to the count from the database
-            nameLabel.Text = "hello user " + id.ToString();
+            nameLabel.Text = "hello user " + userID;
+            try
+            {
+                //get the assigned and owned lists
+                string queryString = "select * from itemTable where itemCreateUserID = '" + userID + "'";
+            }
+            catch(Exception e)
+            {
+                errorLabel.Text = e.Message;
+            }
 
 
             //probably make a for loop to insert the items at beginning of list, in case someone added an item and then signed in
