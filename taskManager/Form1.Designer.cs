@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "",
             ""}, -1);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
@@ -66,7 +66,7 @@
             this.columnHeader1});
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem1});
             this.listView1.Location = new System.Drawing.Point(608, 286);
             this.listView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listView1.Name = "listView1";
@@ -348,7 +348,7 @@
             this.showList.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.showList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.showList.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.showList.ForeColor = System.Drawing.Color.Transparent;
+            this.showList.ForeColor = System.Drawing.Color.Black;
             this.showList.Image = global::taskManager.Properties.Resources.thisisit;
             this.showList.Location = new System.Drawing.Point(92, 149);
             this.showList.Name = "showList";
