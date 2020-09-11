@@ -72,7 +72,7 @@ namespace taskManager
                 
                 f.Show();
                 f.userID = id.ToString();
-                //f.getList(id);
+                f.getList();
                 //if it works
                 //this.Close();
             }

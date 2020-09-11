@@ -138,6 +138,7 @@ namespace taskManager
             tAssigned.Text = "";
             tCompleted.Text = "";
 
+            //put created item in the database
             try
             {
                 if (userID != "")//if there is a valid user id
@@ -253,12 +254,26 @@ namespace taskManager
         public  void getList()
         {
             //will need to query for all of the items with a matching user id, obtained from sign in and register pages
-            myList[] m = new myList[1]; // set length to the count from the database
+            
             nameLabel.Text = "hello user " + userID;
+            myList m = new myList(); // arr)ay for holding the old items
             try
             {
                 //get the assigned and owned lists
+                string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=tms;";
                 string queryString = "select * from itemTable where itemCreateUserID = '" + userID + "'";
+                MySqlConnection conn = new MySqlConnection(connectionString);
+                MySqlCommand com = new MySqlCommand(queryString, conn);
+                conn.Open();
+                MySqlDataReader dr = com.ExecuteReader();
+                while(dr.Read())
+                {
+                    m.listName = dr.GetString(1);
+                    m.listDescription = dr["itemDetail"].ToString();
+                    listBox1.Items.Add(m.listName);
+                    listLog.Add(m);
+                }
+                
             }
             catch(Exception e)
             {
