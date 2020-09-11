@@ -256,7 +256,7 @@ namespace taskManager
             //will need to query for all of the items with a matching user id, obtained from sign in and register pages
             
             nameLabel.Text = "hello user " + userID;
-            myList m = new myList(); // arr)ay for holding the old items
+            
             try
             {
                 //get the assigned and owned lists
@@ -268,10 +268,11 @@ namespace taskManager
                 MySqlDataReader dr = com.ExecuteReader();
                 while(dr.Read())
                 {
+                    myList m = new myList(); // arr)ay for holding the old items
                     m.listName = dr.GetString(1);
                     m.listDescription = dr["itemDetail"].ToString();
-                    listBox1.Items.Add(m.listName);
-                    listLog.Add(m);
+                    listBox1.Items.Insert(0,m.listName);
+                    listLog.Insert(0,m);
                 }
                 
             }
