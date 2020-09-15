@@ -40,6 +40,7 @@ namespace taskManager
 
         private void regSubButton_Click(object sender, EventArgs e)
         {
+            string userId = "";
             if(tFirstName.Text!= "" || tEmail.Text != "" || tPassword.Text != "" )
             {
                 //delPassData del = new delPassData(f.signInName);
@@ -85,6 +86,29 @@ namespace taskManager
                             {
 
                             }
+                            dbConnect.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            errLabel.Text = ex.Message;
+                        }
+
+                        //get the userid from newly inserted row in the database
+                        try
+                        {
+                            string connectionString2 = "datasource=127.0.0.1;port=3306;username=root;password=;database=tms;";
+                            string addUser = "select userID from userTable where userEmail = '" + this.tEmail + "'";
+                            MySqlConnection dbConnect = new MySqlConnection(connectionString2);
+                            MySqlCommand myCommand = new MySqlCommand(addUser, dbConnect);
+                            dbConnect.Open();
+                            MySqlDataReader myReader = myCommand.ExecuteReader();
+                            while (myReader.Read())
+                            {                                
+                                userId = myReader.GetValue(0).ToString();
+                                
+                                errLabel.Text = userId;
+                            }
+                            
                             dbConnect.Close();
                         }
                         catch (Exception ex)
