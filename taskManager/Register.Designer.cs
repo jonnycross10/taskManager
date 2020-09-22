@@ -40,6 +40,7 @@
             this.tLastName = new System.Windows.Forms.TextBox();
             this.lLastName = new System.Windows.Forms.Label();
             this.displayLabel = new System.Windows.Forms.Label();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // label1
@@ -148,12 +149,20 @@
             this.displayLabel.Size = new System.Drawing.Size(0, 20);
             this.displayLabel.TabIndex = 10;
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(627, 337);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(100, 23);
+            this.progressBar1.TabIndex = 11;
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(1024, 540);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.displayLabel);
             this.Controls.Add(this.tLastName);
             this.Controls.Add(this.lLastName);
@@ -187,5 +196,6 @@
         private System.Windows.Forms.TextBox tLastName;
         private System.Windows.Forms.Label lLastName;
         private System.Windows.Forms.Label displayLabel;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
