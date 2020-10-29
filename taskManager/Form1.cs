@@ -146,7 +146,7 @@ namespace taskManager
                     nameLabel.Text = userID;
                     string connectionString2 = "datasource=127.0.0.1;port=3306;username=root;password=;database=tms;";
                     string insertItem = "insert into itemTable(itemName, itemDetail, itemAssignedUserID, itemCreateUserID, itemCreateDT, itemUpdateUserID, itemState) " +
-                    "values( '" + item1.listName + "', '" + item1.listDescription + "', '"+ userID+ "', '" + userID + "', '" + DateTime.Now + "', 24, 'O') ;";
+                    "values( '" + item1.listName + "', '" + item1.listDescription + "', '"+ userID+ "', '" + userID + "', '" + DateTime.Now + "', '"+userID+"', 'O') ;";
                     MySqlConnection dbConnect = new MySqlConnection(connectionString2);
                     MySqlCommand myCommand = new MySqlCommand(insertItem, dbConnect);
                     dbConnect.Open();
