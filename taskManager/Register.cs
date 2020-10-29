@@ -50,8 +50,7 @@ namespace taskManager
                 try
                 {
                     int output = 0;
-                    string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=tms;";
-                    //string existingAccount = "select * from userTable;"; 
+                    string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=tms;"; 
                     string existingAccount = "select * from userTable where userEmail = '" + this.tEmail.Text + "';";
                     MySqlConnection conn = new MySqlConnection(connectionString);
                     conn.Open();
