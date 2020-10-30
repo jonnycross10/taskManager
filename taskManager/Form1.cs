@@ -220,6 +220,18 @@ namespace taskManager
             listLog.RemoveAt(index);
             listBox1.Items.RemoveAt(index);
             setLabelVisibility(false);
+
+            string connectionString2 = "datasource=127.0.0.1;port=3306;username=root;password=;database=tms;";
+            string delItem = "";
+            MySqlConnection dbConnect = new MySqlConnection(connectionString2);
+            MySqlCommand myCommand = new MySqlCommand(delItem, dbConnect);
+            dbConnect.Open();
+            MySqlDataReader myReader = myCommand.ExecuteReader();
+            while (myReader.Read())
+            {
+
+            }
+            dbConnect.Close();
         }
 
         private void deleteListItem_MouseHover(object sender, EventArgs e)
