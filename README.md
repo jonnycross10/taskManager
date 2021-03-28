@@ -1,6 +1,6 @@
 # taskManager
 
-download the code to your local repository
+download the code to your local repository(I used Visual Studio to create this Windows Form App)
 
 connect to a database from your ide
 
